@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TDEE">
+<meta name="theme-color" content="#0d1320">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzNGQzYzAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2ZmUzOWEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQyIiBmaWxsPSIjMTAxODI4Ii8+PHBhdGggZD0iTTM2IDExOEw2OCA4MEw5NiAxMDBMMTQ0IDU0IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==">
+<title>Maintenance Coach</title>
+<style>
+  :root{
+    --bg0:#0b111c; --bg1:#0f1828; --card:#151f30; --card2:#18243a;
+    --line:rgba(255,255,255,.07); --line2:rgba(255,255,255,.12);
+    --ink:#eaf1fb; --muted:#8b97a9; --muted2:#5f6b7d;
+    --a1:#34d3c0; --a2:#6fe39a; --warn:#f0b651; --bad:#ff7a92; --good:#6fe39a;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Arial,sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1100px 520px at 80% -10%, rgba(52,211,192,.16), transparent 60%),
+      radial-gradient(900px 480px at -10% 8%, rgba(111,227,154,.10), transparent 55%),
+      linear-gradient(180deg,var(--bg0),var(--bg1));
+    background-attachment:fixed;
+    min-height:100vh;
+    padding:calc(env(safe-area-inset-top) + 6px) 0 calc(env(safe-area-inset-bottom) + 30px);
+  }
+  .wrap{max-width:540px;margin:0 auto;padding:0 16px}
+  .top{display:flex;align-items:center;gap:11px;padding:8px 4px 2px}
+  .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--a1),var(--a2));
+        display:flex;align-items:center;justify-content:center;flex-shrink:0;
+        box-shadow:0 6px 18px rgba(52,211,192,.35)}
+  .logo svg{width:22px;height:22px}
+  .top h1{margin:0;font-size:16px;font-weight:700;letter-spacing:.2px}
+  .top p{margin:1px 0 0;font-size:11.5px;color:var(--muted)}
+
+  .install{margin-top:12px;background:linear-gradient(135deg,rgba(52,211,192,.14),rgba(111,227,154,.08));
+    border:1px solid var(--line2);border-radius:14px;padding:11px 13px;display:flex;gap:10px;align-items:center;font-size:12.5px;color:#cfe9e4}
+  .install b{color:#fff}
+  .install .x{margin-left:auto;color:var(--muted);font-size:18px;padding:0 4px;background:none;border:none}
+
+  /* HERO */
+  .hero{margin-top:14px;border-radius:24px;padding:22px 22px 20px;position:relative;overflow:hidden;
+    background:linear-gradient(150deg,#16263f 0%,#142033 55%,#101a2b 100%);
+    border:1px solid var(--line2);box-shadow:0 20px 50px -22px rgba(0,0,0,.8)}
+  .hero::after{content:"";position:absolute;width:260px;height:260px;right:-70px;top:-110px;border-radius:50%;
+    background:radial-gradient(circle,rgba(52,211,192,.28),transparent 65%)}
+  .hero .lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .hero .val{font-size:60px;font-weight:800;line-height:.95;margin:6px 0 0;letter-spacing:-1.5px;
+    background:linear-gradient(120deg,#fff,#bfeee6 60%,var(--a1));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{font-size:13px;color:var(--muted);margin-top:6px}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:5px 11px;border-radius:30px;
+    background:rgba(255,255,255,.08);border:1px solid var(--line2);color:#d8e6f2;position:absolute;top:20px;right:20px}
+  .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--a2);box-shadow:0 0 8px var(--a2)}
+  .chip.est .dot{background:var(--warn);box-shadow:0 0 8px var(--warn)}
+  .targetbar{margin-top:18px;display:flex;align-items:center;gap:12px;background:rgba(111,227,154,.10);
+    border:1px solid rgba(111,227,154,.22);border-radius:14px;padding:12px 14px}
+  .targetbar .t{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+  .targetbar .n{font-size:24px;font-weight:800;color:var(--good);margin-top:1px}
+  .targetbar .r{margin-left:auto;text-align:right;font-size:11px;color:var(--muted)}
+  .targetbar .r b{display:block;font-size:15px;color:var(--ink);font-weight:700}
+
+  .card{background:linear-gradient(180deg,var(--card),var(--bg1));border:1px solid var(--line);
+    border-radius:20px;padding:18px;margin-top:14px;box-shadow:0 14px 40px -28px rgba(0,0,0,.9)}
+  .card h2{margin:0 0 14px;font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:1.4px;
+    display:flex;align-items:center;gap:8px}
+
+  label{display:block;font-size:11.5px;color:var(--muted);margin:0 0 6px;font-weight:500}
+  .row{display:flex;gap:11px}
+  .row>div{flex:1}
+  input{width:100%;font-size:17px;font-weight:600;padding:13px 14px;border:1.5px solid var(--line2);border-radius:14px;
+    background:rgba(255,255,255,.035);color:var(--ink);font-family:inherit;transition:border-color .15s,background .15s}
+  input::placeholder{color:var(--muted2);font-weight:500}
+  input:focus{outline:none;border-color:var(--a1);background:rgba(52,211,192,.06)}
+  .save{width:100%;margin-top:14px;background:linear-gradient(135deg,var(--a1),var(--a2));color:#05231e;
+    font-size:16px;font-weight:800;padding:15px;border-radius:15px;letter-spacing:.3px;
+    box-shadow:0 12px 26px -10px rgba(52,211,192,.6);transition:transform .08s,filter .15s}
+  .save:active{transform:scale(.98);filter:brightness(.95)}
+  .tip{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:12px}
+
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:14px}
+  .stat .v{font-size:25px;font-weight:800;letter-spacing:-.5px}
+  .stat .v.accent{background:linear-gradient(120deg,var(--a2),var(--a1));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat .l{font-size:10.5px;color:var(--muted);margin-top:4px;line-height:1.35;text-transform:uppercase;letter-spacing:.5px}
+  .arrow{font-size:14px}
+
+  .banner{font-size:12.5px;padding:12px 14px;border-radius:14px;line-height:1.5;border:1px solid var(--line2)}
+  .banner.info{background:rgba(240,182,81,.10);border-color:rgba(240,182,81,.28);color:#f2d49a}
+  .banner.ok{background:rgba(111,227,154,.10);border-color:rgba(111,227,154,.28);color:#bdf0d0}
+  .banner b{color:#fff}
+  .confnote{font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.5}
+
+  svg.chart{width:100%;height:auto;display:block;overflow:visible}
+  .empty{font-size:12.5px;color:var(--muted2);text-align:center;padding:22px 0}
+  .caption{font-size:11px;color:var(--muted2);text-align:center;margin-top:8px}
+
+  .hist{display:flex;flex-direction:column;gap:2px}
+  .hrow{display:grid;grid-template-columns:1fr auto auto 32px;align-items:center;gap:10px;padding:11px 4px;border-bottom:1px solid var(--line)}
+  .hrow:last-child{border-bottom:none}
+  .hrow .d{font-size:13px;font-weight:600}
+  .hrow .m{font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums}
+  .hrow .m span{font-size:10px;color:var(--muted2);margin-left:2px}
+  .del{background:rgba(255,122,146,.12);color:var(--bad);font-size:13px;width:28px;height:28px;border-radius:9px}
+  .hhead{display:grid;grid-template-columns:1fr auto auto 32px;gap:10px;padding:0 4px 8px;font-size:10px;
+    color:var(--muted2);text-transform:uppercase;letter-spacing:1px}
+  .hhead span:not(:first-child){text-align:right}
+
+  details summary{cursor:pointer;font-size:13px;color:var(--ink);font-weight:600;list-style:none;display:flex;align-items:center;gap:8px}
+  details summary::-webkit-details-marker{display:none}
+  details[open] summary .chev{transform:rotate(90deg)}
+  .chev{transition:transform .2s;color:var(--muted);font-size:12px}
+  .btn2{width:100%;background:rgba(255,255,255,.05);color:var(--ink);border:1px solid var(--line2);
+    font-size:14px;font-weight:700;padding:12px;border-radius:13px;transition:background .15s}
+  .btn2:active{background:rgba(255,255,255,.12)}
+  .brow{display:flex;gap:10px;margin-top:10px}
+  .brow .btn2{flex:1;font-size:13px;padding:11px}
+  .reset{width:100%;margin-top:14px;background:rgba(255,122,146,.12);color:var(--bad);border:1px solid rgba(255,122,146,.25);
+    font-size:14px;font-weight:700;padding:12px;border-radius:13px}
+
+  .foot{text-align:center;font-size:10.5px;color:var(--muted2);margin-top:20px;line-height:1.7}
+  button{font-family:inherit;cursor:pointer;border:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M3 16L8 10L12 13L21 5" stroke="#05231e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div><h1>Maintenance Coach</h1><p>Your adaptive TDEE, from your own data</p></div>
+  </div>
+
+  <div class="install" id="installHint">
+    <span>📲</span><span>Open in <b>Safari</b>, tap <b>Share → Add to Home Screen</b> to use it like an app.</span>
+    <button class="x" id="dismissHint">×</button>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="chip" id="heroChip"><span class="dot"></span><span id="heroChipTxt">add data</span></div>
+    <div class="lbl">Maintenance · TDEE</div>
+    <div class="val" id="heroVal">—</div>
+    <div class="sub" id="heroSub">Log a week to reveal your true number</div>
+    <div class="targetbar">
+      <div>
+        <div class="t">Eat this to lose fat</div>
+        <div class="n" id="targetVal">—</div>
+      </div>
+      <div class="r"><span>projected</span><b id="projVal">—</b></div>
+    </div>
+  </div>
+
+  <!-- LOG -->
+  <div class="card">
+    <h2>＋ Log today</h2>
+    <div class="row">
+      <div><label>Date</label><input type="date" id="inDate"></div>
+      <div><label>Weight (kg)</label><input type="number" inputmode="decimal" step="0.1" id="inWeight" placeholder="79.9"></div>
+    </div>
+    <div style="margin-top:11px">
+      <label>Calories eaten — from NutriKit</label>
+      <input type="number" inputmode="numeric" step="1" id="inKcal" placeholder="e.g. 2200">
+    </div>
+    <button class="save" id="saveBtn">Save entry</button>
+    <div class="tip">Weigh in the morning, after the toilet, before food. Calories = your NutriKit daily total. Log both, every day.</div>
+  </div>
+
+  <!-- NUMBERS -->
+  <div class="card">
+    <h2>📊 Your numbers</h2>
+    <div class="banner info" id="banner">Log your weight and calories each day. After ~1 week your real maintenance appears automatically.</div>
+    <div class="stats" style="margin-top:13px">
+      <div class="stat"><div class="v" id="sMaint">—</div><div class="l">Maintenance (TDEE)</div></div>
+      <div class="stat"><div class="v accent" id="sTarget">—</div><div class="l">Fat-loss target</div></div>
+      <div class="stat"><div class="v" id="sTrend">—</div><div class="l">Weight trend / week</div></div>
+      <div class="stat"><div class="v" id="sProj">—</div><div class="l">Loss at target / week</div></div>
+    </div>
+    <div class="confnote" id="confNote"></div>
+  </div>
+
+  <!-- CHART -->
+  <div class="card">
+    <h2>📈 Weight trend</h2>
+    <div id="chart"><div class="empty">Log at least 2 weight days to see your trend.</div></div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="card">
+    <h2>🗒️ History</h2>
+    <div id="history"><div class="empty">No entries yet.</div></div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="card">
+    <details>
+      <summary><span class="chev">▶</span> Settings</summary>
+      <div style="margin-top:16px">
+        <div class="row">
+          <div><label>Daily deficit (kcal)</label><input type="number" id="setDeficit" value="500"></div>
+          <div><label>Starting estimate</label><input type="number" id="setSeed" value="2300"></div>
+        </div>
+        <div class="tip">Steady fat loss = a 500 kcal deficit (~0.5 kg/week). The starting estimate is shown until ~7 days of data exist; then your real logged numbers take over.</div>
+
+        <div style="margin-top:18px;border-top:1px solid var(--line);padding-top:16px">
+          <label style="margin-bottom:10px">Backup &amp; restore</label>
+          <button class="btn2" id="exportBtn">⤓ Export my data (JSON)</button>
+          <div class="brow">
+            <button class="btn2" id="mergeBtn">Import · Merge</button>
+            <button class="btn2" id="replaceBtn">Import · Replace</button>
+          </div>
+          <input type="file" id="importFile" accept="application/json,.json" style="display:none">
+          <div class="tip">Export saves a backup file you can keep or move to another device. Import restores it — <b>Merge</b> adds to what's here, <b>Replace</b> overwrites everything.</div>
+        </div>
+
+        <button class="reset" id="resetBtn">Erase all my data</button>
+      </div>
+    </details>
+  </div>
+
+  <div class="foot">
+    Maintenance = your avg intake adjusted for weight trend (≈7,700 kcal/kg).<br>
+    Data stays only on this device · Not medical advice
+  </div>
+</div>
+
+<script>
+const KCAL_PER_KG = 7700;
+const KEY = "maintCoach.v2";
+let state = load();
+
+function load(){
+  try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s&&s.entries) return s; }catch(e){}
+  // migrate v1 if present
+  try{ const o=JSON.parse(localStorage.getItem("maintCoach.v1")); if(o&&o.entries) return o; }catch(e){}
+  return { entries:[], deficit:500, seed:2300, hint:true };
+}
+function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }
+const $ = id => document.getElementById(id);
+function todayStr(){ const d=new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); }
+
+$("inDate").value = todayStr();
+$("setDeficit").value = state.deficit;
+$("setSeed").value = state.seed;
+if(state.hint===false) $("installHint").style.display="none";
+$("dismissHint").onclick=()=>{ state.hint=false; save(); $("installHint").style.display="none"; };
+
+$("saveBtn").onclick = ()=>{
+  const date=$("inDate").value||todayStr();
+  const w=parseFloat($("inWeight").value), k=parseFloat($("inKcal").value);
+  if(isNaN(w)&&isNaN(k)){ alert("Enter a weight and/or calories."); return; }
+  const ex=state.entries.find(e=>e.date===date);
+  if(ex){ if(!isNaN(w))ex.weight=w; if(!isNaN(k))ex.kcal=k; }
+  else state.entries.push({date,weight:isNaN(w)?null:w,kcal:isNaN(k)?null:k});
+  state.entries.sort((a,b)=>a.date<b.date?-1:1);
+  save(); $("inWeight").value=""; $("inKcal").value=""; render();
+};
+$("setDeficit").onchange=e=>{ state.deficit=parseInt(e.target.value)||500; save(); render(); };
+$("setSeed").onchange=e=>{ state.seed=parseInt(e.target.value)||2300; save(); render(); };
+$("resetBtn").onclick=()=>{ if(confirm("Delete all logged entries? This cannot be undone.")){ state.entries=[]; save(); render(); } };
+
+$("exportBtn").onclick=exportData;
+$("mergeBtn").onclick=()=>triggerImport("merge");
+$("replaceBtn").onclick=()=>triggerImport("replace");
+let importMode="merge";
+function triggerImport(mode){ importMode=mode; $("importFile").value=""; $("importFile").click(); }
+function exportData(){
+  const payload=JSON.stringify({app:"MaintenanceCoach",version:2,exported:new Date().toISOString(),
+    deficit:state.deficit,seed:state.seed,entries:state.entries},null,2);
+  const blob=new Blob([payload],{type:"application/json"}), url=URL.createObjectURL(blob);
+  const a=document.createElement("a"); a.href=url; a.download="maintenance-coach-backup-"+todayStr()+".json";
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+$("importFile").onchange=e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      const data=JSON.parse(r.result);
+      const incoming=Array.isArray(data)?data:(data.entries||[]);
+      if(!Array.isArray(incoming)) throw 0;
+      const clean=incoming.filter(x=>x&&x.date).map(x=>({date:x.date,weight:x.weight??null,kcal:x.kcal??null}));
+      if(importMode==="replace"){ state.entries=clean; }
+      else {
+        const map={}; state.entries.forEach(x=>map[x.date]={...x});
+        clean.forEach(x=>{ if(map[x.date]){ if(x.weight!=null)map[x.date].weight=x.weight; if(x.kcal!=null)map[x.date].kcal=x.kcal; }
+          else map[x.date]={date:x.date,weight:x.weight,kcal:x.kcal}; });
+        state.entries=Object.values(map);
+      }
+      if(data.deficit) state.deficit=data.deficit;
+      if(data.seed) state.seed=data.seed;
+      state.entries.sort((a,b)=>a.date<b.date?-1:1);
+      save(); $("setDeficit").value=state.deficit; $("setSeed").value=state.seed; render();
+      alert("Imported "+clean.length+" day"+(clean.length===1?"":"s")+" ("+importMode+").");
+    }catch(err){ alert("Couldn't read that file. Use a Maintenance Coach export (.json)."); }
+  };
+  r.readAsText(f);
+};
+
+function dayIndex(ds,base){ return Math.round((new Date(ds)-base)/86400000); }
+function regression(pts){ const n=pts.length; if(n<2)return null;
+  let sx=0,sy=0,sxy=0,sxx=0; for(const p of pts){sx+=p.x;sy+=p.y;sxy+=p.x*p.y;sxx+=p.x*p.x;}
+  const d=n*sxx-sx*sx; if(d===0)return null;
+  const slope=(n*sxy-sx*sy)/d; return {slope,intercept:(sy-slope*sx)/n}; }
+
+function compute(){
+  const E=state.entries;
+  if(!E.length) return {ready:false,days:0,wDays:0,kDays:0,maint:state.seed,wEntries:[]};
+  const base=new Date(E[0].date);
+  const wE=E.filter(e=>e.weight!=null), kE=E.filter(e=>e.kcal!=null);
+  const wpts=wE.map(e=>({x:dayIndex(e.date,base),y:e.weight}));
+  const reg=regression(wpts);
+  const slope=reg?reg.slope:0;
+  const trendWk=slope*7;
+  const avg=kE.length? kE.reduce((s,e)=>s+e.kcal,0)/kE.length : null;
+  const span=dayIndex(E[E.length-1].date,base)+1;
+  const ready = wE.length>=4 && kE.length>=4 && span>=7 && avg!=null && reg;
+  const maint = ready ? avg - slope*KCAL_PER_KG : state.seed;
+  return {ready,days:span,wDays:wE.length,kDays:kE.length,slope,trendWk,avg,maint,wEntries:wpts,reg,base};
+}
+function fmt(n,d=0){ return (n==null||isNaN(n))?"—":Number(n).toLocaleString(undefined,{maximumFractionDigits:d,minimumFractionDigits:d}); }
+
+function render(){
+  const c=compute();
+  const maint=Math.round(c.maint), target=maint-state.deficit;
+  $("heroVal").textContent = c.days? (c.ready?maint:"~"+maint) : "—";
+  $("heroSub").textContent = c.ready? "Live estimate from your logged data" : (c.days? "Starting estimate — keep logging to refine" : "Log a week to reveal your true number");
+  const chip=$("heroChip");
+  chip.className = "chip" + (c.ready?"":" est");
+  $("heroChipTxt").textContent = c.ready? "live" : (c.days?"estimate":"add data");
+  $("targetVal").textContent = c.days? fmt(target)+" kcal" : "—";
+  $("projVal").textContent = fmt(state.deficit*7/KCAL_PER_KG,2)+" kg/wk";
+
+  $("sMaint").textContent=c.days?fmt(maint):"—";
+  $("sTarget").textContent=c.days?fmt(target):"—";
+  const tw=c.trendWk;
+  $("sTrend").innerHTML = (tw==null||c.wDays<2)?"—":
+    `${tw<=0?'<span class="arrow" style="color:var(--good)">↓</span>':'<span class="arrow" style="color:var(--bad)">↑</span>'} ${fmt(Math.abs(tw),2)}`;
+  $("sProj").textContent=fmt(state.deficit*7/KCAL_PER_KG,2)+" kg";
+
+  const b=$("banner");
+  if(!c.days){ b.className="banner info"; b.innerHTML="Log your weight and calories each day. After ~1 week your real maintenance appears automatically."; }
+  else if(!c.ready){ b.className="banner info"; b.innerHTML=`Building your estimate — <b>${c.kDays}/7</b> calorie days, <b>${c.wDays}/7</b> weight days. Using your starting estimate until then. Keep going! 💪`; }
+  else { b.className="banner ok"; b.innerHTML=`✓ Live estimate from <b>${c.days} days</b>. Eat about <b>${fmt(target)} kcal</b> for steady fat loss — re-check weekly, it adapts as you log.`; }
+  $("confNote").textContent = c.ready? `Based on avg intake ${fmt(c.avg)} kcal and a ${(c.trendWk>0?"+":"")}${fmt(c.trendWk,2)} kg/week weight trend.` : "";
+
+  drawChart(c); drawHistory();
+}
+
+function drawChart(c){
+  const el=$("chart"); const pts=c.wEntries||[];
+  if(pts.length<2){ el.innerHTML='<div class="empty">Log at least 2 weight days to see your trend.</div>'; return; }
+  const W=520,H=200,pad={l:40,r:14,t:16,b:22};
+  const xs=pts.map(p=>p.x), ys=pts.map(p=>p.y);
+  const xmin=Math.min(...xs),xmax=Math.max(...xs);
+  let ymin=Math.min(...ys),ymax=Math.max(...ys);
+  const py=Math.max(0.5,(ymax-ymin)*0.3); ymin-=py; ymax+=py;
+  const X=x=>pad.l+(xmax===xmin?0.5:(x-xmin)/(xmax-xmin))*(W-pad.l-pad.r);
+  const Y=y=>pad.t+(1-(y-ymin)/(ymax-ymin))*(H-pad.t-pad.b);
+  let g=`<defs>
+    <linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#34d3c0"/><stop offset="1" stop-color="#6fe39a"/></linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(52,211,192,.30)"/><stop offset="1" stop-color="rgba(52,211,192,0)"/></linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>`;
+  for(let i=0;i<=3;i++){ const yy=ymin+(ymax-ymin)*i/3, Py=Y(yy);
+    g+=`<line x1="${pad.l}" y1="${Py}" x2="${W-pad.r}" y2="${Py}" stroke="rgba(255,255,255,.06)"/>`;
+    g+=`<text x="2" y="${Py+4}" font-size="10" fill="#5f6b7d">${yy.toFixed(1)}</text>`; }
+  if(c.reg){ const y1=c.reg.intercept+c.reg.slope*xmin, y2=c.reg.intercept+c.reg.slope*xmax;
+    g+=`<line x1="${X(xmin)}" y1="${Y(y1)}" x2="${X(xmax)}" y2="${Y(y2)}" stroke="#6fe39a" stroke-width="1.6" stroke-dasharray="5 5" opacity=".55"/>`; }
+  let area=`M ${X(pts[0].x)} ${Y(pts[0].y)} `, line=area;
+  pts.forEach((p,i)=>{ if(i){ line+=`L ${X(p.x).toFixed(1)} ${Y(p.y).toFixed(1)} `; } });
+  area=line+`L ${X(pts[pts.length-1].x)} ${H-pad.b} L ${X(pts[0].x)} ${H-pad.b} Z`;
+  g+=`<path d="${area}" fill="url(#fill)"/>`;
+  g+=`<path d="${line}" fill="none" stroke="url(#ln)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>`;
+  pts.forEach(p=>{ g+=`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="3" fill="#0b111c" stroke="#6fe39a" stroke-width="2"/>`; });
+  el.innerHTML=`<svg class="chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">${g}</svg>
+    <div class="caption">● daily weight · ┄ your trend line</div>`;
+}
+
+function drawHistory(){
+  const el=$("history"); const E=[...state.entries].reverse();
+  if(!E.length){ el.innerHTML='<div class="empty">No entries yet.</div>'; return; }
+  let rows='';
+  for(const e of E){ const d=new Date(e.date).toLocaleDateString(undefined,{month:'short',day:'numeric'});
+    rows+=`<div class="hrow"><div class="d">${d}</div>
+      <div class="m">${e.weight!=null?e.weight.toFixed(1):'—'}<span>kg</span></div>
+      <div class="m">${e.kcal!=null?e.kcal.toLocaleString():'—'}<span>kcal</span></div>
+      <button class="del" data-d="${e.date}">✕</button></div>`; }
+  el.innerHTML=`<div class="hhead"><span>Date</span><span>Weight</span><span>Calories</span><span></span></div><div class="hist">${rows}</div>`;
+  el.querySelectorAll(".del").forEach(b=>b.onclick=()=>{ state.entries=state.entries.filter(x=>x.date!==b.dataset.d); save(); render(); });
+}
+
+render();
+</script>
+</body>
+</html>
