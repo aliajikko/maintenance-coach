@@ -131,6 +131,75 @@
   nav button{flex:1;background:none;color:var(--muted2);font-size:10px;font-weight:700;padding:7px 0 5px;border-radius:13px}
   nav button svg{display:block;margin:0 auto 4px;width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   nav button.on{color:var(--a2);background:rgba(24,193,204,.12)}
+  .chips{flex-wrap:wrap;overflow:visible}
+  .sect{margin:26px 4px 0;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted2)}
+  .sum{border-color:rgba(24,193,204,.3);background:linear-gradient(155deg,#0f3a4d 0%,#0b2a3a 60%,#082030 100%)}
+  .sum .lead{font-size:19px;font-weight:700;margin:0 0 4px;color:var(--sand)} .sum .lead b{font-size:26px}
+  .sum .sl{font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-top:14px} .sum .sl.co{color:var(--coral)}
+  .sum ul{margin:8px 0 0;padding-left:20px} .sum li{font-size:14px;line-height:1.55;margin-bottom:6px;color:#d9ecef} .sum li b{color:#fff}
+  .an .anh{display:flex;align-items:center;gap:10px;margin-bottom:10px} .an h3{margin:0;font-size:17px;font-weight:800;flex:1}
+  .an p{margin:0;font-size:14.5px;line-height:1.65;color:#cfe4e8} .an p b{color:#fff}
+  .an .do{margin-top:12px;font-size:13.5px;line-height:1.55;padding:11px 13px;border-radius:13px;background:rgba(255,143,112,.09);border:1px solid rgba(255,143,112,.22);color:#ffd9cc} .an .do b{color:#fff}
+  .tg{font-size:10.5px;font-weight:800;letter-spacing:.5px;padding:5px 10px;border-radius:30px;white-space:nowrap}
+  .tg.good{background:rgba(99,230,196,.15);color:var(--good)} .tg.watch{background:rgba(243,194,107,.15);color:var(--warn)}
+  .tg.work{background:rgba(255,122,143,.15);color:var(--bad)} .tg.info{background:rgba(255,255,255,.08);color:var(--muted)}
+  .gsum{margin-top:12px;font-size:13.5px;color:var(--muted)} .gsum b{color:var(--ink)} .gsum:empty{display:none}
+  .rest{position:sticky;top:calc(env(safe-area-inset-top) + 8px);z-index:6;display:flex;align-items:center;gap:10px;margin-top:14px;padding:11px 14px;border-radius:16px;background:var(--coral);color:#3a1206;font-weight:700;font-size:14px;box-shadow:0 10px 24px -10px rgba(255,143,112,.7)}
+  .rest b{flex:1;font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}
+  .rest button{background:rgba(58,18,6,.16);color:#3a1206;font-weight:800;font-size:13px;padding:8px 13px;border-radius:11px}
+  .ex .exh{display:flex;align-items:flex-start;gap:12px}
+  .ex .exh>div{flex:1;min-width:0}
+  .exn{display:block;font-size:16.5px;font-weight:800;line-height:1.3;overflow-wrap:anywhere;flex:1;min-width:0}
+  .exn small{display:block;font-size:12px;font-weight:500;color:var(--muted);line-height:1.5;margin-top:4px}
+  .exm{font-size:12px;color:var(--muted);line-height:1.5;margin-top:4px}
+  .prev{margin:12px 0 8px;font-size:13px;line-height:1.5;color:#cdeef0;background:rgba(24,193,204,.08);border:1px solid rgba(24,193,204,.2);border-radius:12px;padding:9px 12px} .prev b{color:#fff}
+  .sr{display:grid;grid-template-columns:36px minmax(0,1fr) 76px 64px 40px;gap:8px;align-items:center;padding:6px 4px}
+  .sr.head{padding-bottom:2px} .sr.head span{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted2)}
+  .sr.head span:nth-child(3),.sr.head span:nth-child(4){text-align:center}
+  .sr.done{background:rgba(99,230,196,.08);border-radius:12px;margin-top:4px}
+  .sr .pv{font-size:13px;color:var(--muted);line-height:1.3} .sr .val{text-align:center;font-size:16px;font-weight:800}
+  .sr input{padding:10px 4px;text-align:center;font-size:16px;border-radius:11px;min-width:0}
+  .sn{width:32px;height:32px;border-radius:10px;background:rgba(255,255,255,.08);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;padding:0}
+  .sn.w{background:rgba(243,194,107,.2);color:var(--warn)}
+  .ok{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--a1),var(--a2));color:#03222a;font-size:18px;font-weight:800;padding:0}
+  .sr .del{width:32px;height:32px;justify-self:center}
+  .rt .n small{overflow-wrap:anywhere}
+  details.pg summary{align-items:flex-start} .chg{font-size:14px;font-weight:800;white-space:nowrap;margin-top:2px}
+  .sheet{position:fixed;inset:0;z-index:30;overflow-y:auto;-webkit-overflow-scrolling:touch;background:linear-gradient(180deg,var(--bg0),var(--bg1));padding:calc(env(safe-area-inset-top) + 14px) 0 calc(env(safe-area-inset-bottom) + 30px)}
+  .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px} .sh h3{margin:0;font-size:20px;font-weight:800} .sh .btn2{width:auto;padding:9px 18px}
+  .pgh{margin:18px 2px 6px;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--a2)}
+  .pk{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 14px;margin-top:8px;color:var(--ink)}
+  .pk .exn{font-size:15px} .pk .pa{flex-shrink:0;font-size:13px;font-weight:800;color:var(--a2);min-width:26px;text-align:center}
+  svg.fig{width:100%;max-width:260px;height:auto;display:block;margin:0 auto}
+  .dl summary{align-items:center} .dl summary svg.fig{width:74px;flex-shrink:0;margin:0;background:rgba(255,255,255,.04);border-radius:10px}
+  .dl ol{margin:10px 0 0;padding-left:20px} .dl li{font-size:13.5px;line-height:1.55;color:#cfe4e8;margin-bottom:5px}
+  .dl .big{background:rgba(255,255,255,.04);border-radius:14px;padding:8px;margin-top:12px}
+  .frm{margin-top:10px;border:1px solid var(--line2);border-radius:12px;padding:10px 12px}
+  .frm summary{list-style:none;cursor:pointer;font-size:13px;font-weight:700;color:var(--a2)} .frm summary::-webkit-details-marker{display:none}
+  .frm p{margin:8px 0 0;font-size:13.5px;line-height:1.55;color:#cfe4e8} .frm a{color:var(--a2);font-size:13px;font-weight:700;text-decoration:none;display:inline-block;margin-top:8px}
+  .ev p{margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#cfe4e8} .ev p b{color:#fff} .ev a{color:var(--a2);font-size:12px;text-decoration:none;margin-right:12px;display:inline-block;margin-top:10px}
+  #mPlFig{background:rgba(255,255,255,.04);border-radius:14px;padding:8px;margin:12px 0 4px}
+  .ph{position:relative;border-radius:14px;overflow:hidden;background:#0a1c28;aspect-ratio:3/2;max-width:460px;margin:10px auto 0}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ph img.f2{animation:flip 2.6s steps(1) infinite}
+  @keyframes flip{0%,49%{opacity:0}50%,100%{opacity:1}}
+  .ph .fb{display:none} .ph.bad{aspect-ratio:auto;background:rgba(255,255,255,.04);padding:8px} .ph.bad img,.ph.bad .cr{display:none} .ph.bad .fb{display:block} .ph.bad.nofb{display:none}
+  .ph .cr{position:absolute;left:8px;bottom:6px;font-size:10px;font-weight:700;color:#fff;background:rgba(0,0,0,.5);padding:2px 7px;border-radius:8px}
+  #mPlFig{background:none;padding:0}
+  .sn{border:1.5px solid transparent;width:36px;font-size:12px} .sn.auto.w,.sn.auto.d{border-style:dashed}
+  .sn.w{background:rgba(243,194,107,.2);color:var(--warn);border-color:rgba(243,194,107,.5)}
+  .sn.d{background:rgba(255,143,112,.18);color:var(--coral);border-color:rgba(255,143,112,.5)}
+  .sn.f{background:rgba(255,122,143,.18);color:var(--bad);border-color:rgba(255,122,143,.5)}
+  .sr{grid-template-columns:40px minmax(0,1fr) 76px 60px 36px}
+  .seg.side{margin:10px 0 4px} .seg.side button{font-size:13px;padding:10px 0}
+  .frm .seg button{font-size:13px;padding:9px 0} .frm label{color:var(--muted)}
+  .phs{font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--a2);margin-top:12px} .phs.prep{color:var(--coral)}
+  .player .cnt.prep{color:var(--coral)} .player .cnt{cursor:pointer}
+  #mPlSteps{text-align:left} #mPlSteps ol{margin:10px 0 0;padding-left:22px} #mPlSteps li{font-size:13.5px;line-height:1.5;color:#cfe4e8;margin-bottom:4px}
+  .rt .acts{display:flex;flex-direction:column;gap:6px;flex-shrink:0} .rt .acts button.pvw{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--line2)}
+  .bdg{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:2px}
+  .bdg.s{background:rgba(99,230,196,.16);color:var(--good)} .bdg.b{background:rgba(255,255,255,.08);color:var(--muted)}
+  .pp{font-size:13.5px;line-height:1.55;color:#cfe4e8;margin:8px 0 0} .pp b{color:#fff}
 </style>
 </head>
 <body>
@@ -145,42 +214,47 @@
 
   <!-- ============ HOME ============ -->
   <section class="tab on" id="tab-home">
+    <div class="card sum"><h2>Your summary <em id="sumDate"></em></h2><div id="sumBody"></div></div>
+    <div id="ana"></div>
+    <div class="card">
+      <h2>Weigh in <em>once a week is enough</em></h2>
+      <div style="display:flex;gap:10px"><input type="number" inputmode="decimal" step="0.1" id="qW" placeholder="Today's weight in kg"><button class="save sm" id="qSave">Save</button></div>
+    </div>
+    <div class="sect">The numbers</div>
     <div class="hero">
       <div class="lbl">Body weight</div>
       <div class="val" id="hW">-</div>
       <div id="hPill"></div>
       <div class="sub" id="hSub">Add a weigh-in to start tracking.</div>
     </div>
-    <div class="card">
-      <h2>Weigh in <em>once a week is enough</em></h2>
-      <div style="display:flex;gap:10px"><input type="number" inputmode="decimal" step="0.1" id="qW" placeholder="Today's weight in kg"><button class="save sm" id="qSave">Save</button></div>
-    </div>
-    <div class="card"><h2>Where you stand <em id="cmpLbl"></em></h2><div class="stats" id="cmp"></div></div>
+    <div class="card"><h2>Where you stand <em>monthly averages</em></h2><div class="stats" id="cmp"></div></div>
     <div class="card"><h2>Long-term trend</h2><div class="chips" id="hChips"></div><div id="hChart"></div></div>
-    <div class="card"><h2>Strength progress</h2><div id="hStr"></div></div>
+    <div class="card"><h2>Strength by muscle group</h2><div id="hStr"></div></div>
     <div class="card"><h2>Consistency <em>sessions per week, last 8 weeks</em></h2><div id="hCons"></div></div>
-    <div class="card"><h2>Focus for now</h2><div id="hIns"></div></div>
   </section>
 
   <!-- ============ GYM ============ -->
   <section class="tab" id="tab-gym">
+    <div class="rest" id="gRest" style="display:none"><span>Rest</span><b id="gTimer">1:30</b><button id="gRestAdd">+15s</button><button id="gRestSkip">Skip</button></div>
     <div class="card">
-      <h2>Log a lift</h2>
-      <div class="chips" id="gGroups"></div>
-      <div class="row first"><div style="flex:1.7"><label>Exercise</label><select id="gEx"></select></div><div><label>Date</label><input type="date" id="gDate"></div></div>
-      <div class="musc" id="gMusc"></div>
-      <div class="row"><div><label>Weight (kg)</label><input type="number" inputmode="decimal" step="0.5" id="gW"></div><div><label>Reps</label><input type="number" inputmode="numeric" id="gR"></div><div><label>Sets</label><input type="number" inputmode="numeric" id="gS"></div></div>
-      <div class="note" id="gHint" style="margin-top:12px"></div>
-      <button class="save" id="gAdd">Add to session</button>
-      <div class="timer"><button data-t="60">Rest 1:00</button><button data-t="90">Rest 1:30</button><button data-t="120">Rest 2:00</button><div class="t" id="gTimer">0:00</div></div>
-      <button class="btn2" id="gNew" style="margin-top:10px">+ Add your own exercise to this group</button>
+      <h2>Workout</h2>
+      <div class="row first"><div><label>Date</label><input type="date" id="gDate"></div>
+        <div><label>Rest timer</label><select id="gRestSel"><option value="0">Off</option><option value="60">1:00</option><option value="90">1:30</option><option value="120">2:00</option><option value="180">3:00</option></select></div></div>
+      <div class="gsum" id="gSum"></div>
     </div>
-    <div class="card"><h2 id="gSessTitle">This session</h2><div id="gSession"></div></div>
-    <div class="card"><h2>Sets per muscle group <em>last 7 days</em></h2><div id="gSets"></div><div class="tip">Research points to roughly 10 or more hard sets per muscle group per week for growth. The bar fills at 10.</div></div>
-    <div class="card"><h2>Progress <em id="gProgName"></em></h2>
-      <div class="stats" style="margin-bottom:14px"><div class="stat"><div class="l">First logged</div><div class="v" id="gFirst">-</div></div><div class="stat"><div class="l">Best so far</div><div class="v" id="gBest">-</div></div></div>
-      <div id="gChart"></div></div>
-    <div class="card"><h2>Recent sessions</h2><div id="gRecent"></div></div>
+    <div id="gCards"></div>
+    <button class="save" id="gAddEx">+ Add exercise</button>
+    <div class="card"><h2>Repeat a past session</h2><div id="gCopy"></div></div>
+    <div class="card"><h2>Sets per muscle group <em>last 7 days</em></h2><div id="gSets"></div><div class="tip">Research points to roughly 10 or more hard sets per muscle group per week for growth. Each bar fills at 10. Warm-up sets are not counted.</div></div>
+    <div class="card"><h2>Exercise progress</h2><div id="gProg"></div></div>
+    <div class="sheet" id="gSheet" style="display:none"><div class="wrap">
+      <div class="sh"><h3>Add exercise</h3><button class="btn2" id="pClose">Close</button></div>
+      <input type="search" id="pSearch" placeholder="Search exercises or muscles">
+      <div class="chips" id="pChips" style="margin-top:12px"></div>
+      <div id="pList"></div>
+      <div class="card"><h2>Add your own</h2><input type="text" id="pName" placeholder="Exercise name">
+        <div class="row"><div><label>Muscle group</label><select id="pGroup"></select></div></div><div class="row"><div><label>Weight I type in is</label><select id="pLoad"><option value="total">Total (stack machine)</option><option value="side">Per side (plate-loaded)</option><option value="each">Per hand (dumbbells)</option></select></div><div><label>Left and right</label><select id="pUni"><option value="0">Together</option><option value="1">Logged separately</option></select></div></div><button class="save" id="pAdd">Add exercise</button></div>
+    </div></div>
   </section>
 
   <!-- ============ MOBILITY ============ -->
@@ -189,15 +263,20 @@
       <h2 id="mPlTitle">Routine</h2>
       <div class="player">
         <div class="bar"><i id="mPlBar"></i></div>
-        <div class="nm" id="mPlName"></div><div class="side" id="mPlSide"></div>
+        <div class="phs" id="mPlPhase"></div><div class="nm" id="mPlName"></div><div class="side" id="mPlSide"></div><div id="mPlFig"></div>
         <div class="cnt" id="mPlCnt">0</div>
-        <div class="cue" id="mPlCue"></div><div class="nx" id="mPlNext"></div>
+        <div class="cue" id="mPlCue"></div><div id="mPlSteps"></div><div class="nx" id="mPlNext"></div>
       </div>
       <div class="brow"><button class="btn2" id="mPause">Pause</button><button class="btn2" id="mSkip">Skip</button><button class="btn2" id="mStop">Stop</button></div>
     </div>
     <div class="card"><h2>This week <em>stretch time per area</em></h2><div id="mWeek"></div>
       <div class="tip">Flexibility research suggests at least <b>5 minutes of stretching per muscle group per week</b>, spread over 5 or more days. Short and often beats long and rare.</div></div>
-    <div class="card"><h2>Routines <em>hips, hamstrings, lower back</em></h2><div id="mList"></div></div>
+    <div class="card"><h2>Routines <em>hips, hamstrings, lower back</em></h2><div id="mList"></div>
+      <div class="row"><div><label>Pause to change position</label><select id="mPrep"><option value="0">None</option><option value="2">2 seconds</option><option value="3">3 seconds</option><option value="5">5 seconds</option><option value="10">10 seconds</option></select></div><div><label>Voice announces each drill</label><select id="mVoice"><option value="1">On</option><option value="0">Off</option></select></div></div>
+      <div class="tip">Tapping <b>Start</b> first shows the full list of drills with pictures and how to do each one. Read through, then tap <b>Begin routine</b>. Between drills there is a short pause to change position, which does not count toward your stretch time.</div></div>
+    <div class="sheet" id="mSheet" style="display:none"><div class="wrap" id="mSheetBody"></div></div>
+    <div class="card"><h2>Drill library <em>how to do each one</em></h2><div id="mLib"></div></div>
+    <div class="card"><h2>What the research says</h2><div id="mEv"></div></div>
     <div class="card"><h2>Monthly check-in</h2>
       <div class="row first"><div><label>Toe-touch gap (cm from fingertips to floor, 0 if you touch)</label><input type="number" inputmode="decimal" id="cToe" placeholder="e.g. 12"></div></div>
       <div style="margin-top:12px"><label>Hip tightness (1 loose, 5 very tight)</label><div class="seg" data-k="hips"></div></div>
@@ -212,7 +291,7 @@
 
   <!-- ============ LEARN ============ -->
   <section class="tab" id="tab-learn"><div id="learn"></div>
-    <div class="foot">Summaries of published research in plain language. Study findings are averages across groups of people and may not apply to you exactly. Not medical advice.</div>
+    <div class="foot">Exercise photos are from the public-domain Free Exercise DB. Summaries of published research in plain language. Study findings are averages across groups of people and may not apply to you exactly. Not medical advice.</div>
   </section>
 
   <!-- ============ DATA ============ -->
@@ -232,6 +311,15 @@
     <div class="card"><h2>Targets</h2>
       <div class="row first"><div><label>Steps per day</label><input type="number" inputmode="numeric" id="tSteps"></div><div><label>Sleep (hours)</label><input type="number" inputmode="decimal" step="0.5" id="tSleep"></div></div>
       <div class="row"><div><label>Gym sessions / week</label><input type="number" inputmode="numeric" id="tGym"></div><div><label>Mobility sessions / week</label><input type="number" inputmode="numeric" id="tMob"></div></div>
+    </div>
+    <div class="card"><h2>Cloud sync <em>optional</em></h2>
+      <div class="note" id="syStatus">Sync is off. Your data is only on this device.</div>
+      <div style="margin-top:12px"><label>Sync address</label><input type="url" id="syUrl" placeholder="https://..." autocapitalize="off" autocorrect="off" spellcheck="false"></div>
+      <div style="margin-top:11px"><label>Sync key (keep this private, it unlocks your data)</label><input type="password" id="syKey" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off"></div>
+      <div class="brow"><button class="btn2" id="syNew">New key</button><button class="btn2" id="syShow">Show</button><button class="btn2" id="syCopy">Copy</button></div>
+      <button class="save" id="syToggle">Turn sync on</button>
+      <button class="btn2" id="syNow" style="margin-top:10px;display:none">Sync now</button>
+      <div class="tip">With sync on, every change is saved to your own Cloudflare account a few seconds later, and the app checks for newer data whenever you open it. To use a second device, enter the same address and key there. The key is never included in backups.</div>
     </div>
     <div class="card"><h2>Backup</h2>
       <button class="btn2" id="exportBtn">Export everything (JSON backup)</button>
@@ -301,35 +389,130 @@ const LIB=[
  ["Hanging knee raise","Core","Lower abs, hip flexors","Grip"]
 ].map(a=>({name:a[0],group:a[1],prim:a[2],sec:a[3]||"",w:a[4],r:a[5],s:a[6]}));
 
-/* name, cue, seconds, sides, area */
-const MOB={
- daily:{name:"Daily reset",mins:9,desc:"Hips, hamstrings and lower back. Aim for most days.",steps:[
-  ["Cat-cow","On hands and knees, slowly round your spine up, then let it arch down. Move with your breath.",60,1,"back"],
-  ["Child's pose","Knees wide, sit back toward your heels, arms long. Breathe into your lower back.",60,1,"back"],
-  ["90/90 hip switches","Sit with both knees bent to 90 degrees. Rotate the knees side to side, chest tall, hands behind you if needed.",60,1,"hips"],
-  ["Half-kneeling hip flexor stretch","Back knee down. Tuck your tailbone and squeeze the back glute. Feel the front of that hip, not your lower back.",45,2,"hips"],
-  ["Figure-4 glute stretch","On your back, ankle over the opposite knee. Pull both legs toward your chest.",45,2,"hips"],
-  ["Lying hamstring stretch","On your back, one leg up with a towel or band around the foot. Knee slightly soft, other leg flat.",45,2,"hams"],
-  ["Glute bridge","Feet flat, lift your hips by squeezing your glutes. Pause 2 seconds at the top. Slow reps.",60,1,"back"]]},
- desk:{name:"Desk break",mins:3,desc:"For the middle of a long sitting block at work.",steps:[
-  ["Standing hip flexor stretch","Step one foot back into a short lunge, tuck your tailbone, squeeze the back glute, reach that arm up.",30,2,"hips"],
-  ["Standing hamstring hinge","Feet hip width, soft knees. Push your hips back with a flat back until you feel the hamstrings, then stand. Slow reps.",45,1,"hams"],
-  ["Seated figure-4","Sitting tall, ankle over the opposite knee. Lean your chest forward with a straight back.",30,2,"hips"],
-  ["Standing back extension","Hands on your hips, gently lean back and return. Small, easy reps.",30,1,"back"]]},
- legs:{name:"After leg day",mins:10,desc:"Longer holds while you are warm. Good after lower-body sessions.",steps:[
-  ["Pigeon or figure-4","Front shin across, back leg long, or stay on your back in figure-4. Ease into the outer hip.",60,2,"hips"],
-  ["Couch stretch","Back shin up against a wall or bench, front foot forward. Tall chest, tailbone tucked.",60,2,"hips"],
-  ["Lying hamstring stretch","On your back, leg up with a band. Hold steady tension, breathe out and relax into it.",60,2,"hams"],
-  ["Frog rock-back","On hands and knees, knees wide. Rock your hips back toward your heels and forward again.",60,1,"hips"],
-  ["World's greatest stretch","Long lunge, inside elbow toward the floor, then rotate that arm to the ceiling.",45,2,"hips"],
-  ["Child's pose","Sit back toward your heels, arms long. Slow breaths.",60,1,"back"]]},
- back:{name:"Back care",mins:6,desc:"Gentle core stability for a tight lower back.",steps:[
-  ["Cat-cow","Slowly round and arch through your whole spine.",60,1,"back"],
-  ["Bird dog","On hands and knees, reach the opposite arm and leg long. Keep hips level. Slow alternating reps.",60,1,"back"],
-  ["Dead bug","On your back, arms up, knees over hips. Lower the opposite arm and leg, keep your lower back on the floor.",60,1,"back"],
-  ["Side plank","Elbow under shoulder, hips high. Bend the knees if needed.",30,2,"back"],
-  ["Glute bridge","Squeeze the glutes to lift, pause at the top.",60,1,"back"],
-  ["Knees to chest","On your back, hug both knees in and rock gently.",60,1,"back"]]}
+/* figures: h head, n neck, p pelvis, c spine curve, a1/a2 arms [elbow,hand], l1/l2 legs [knee,foot] */
+const FIG={
+ catcow:{h:[26,47],n:[36,44],p:[80,44],c:[58,26],a1:[37,57,37,70],a2:[41,57,41,70],l1:[80,70,100,70],l2:[84,70,104,70]},
+ child:{h:[40,66],n:[49,61],p:[84,57],c:[66,48],a1:[34,66,20,70],l1:[70,70,97,70]},
+ ninety:{h:[58,24],n:[58,33],p:[60,62],a1:[67,48,74,64],a2:[50,48,45,62],l1:[38,66,50,70],l2:[80,66,88,54]},
+ hipflex:{h:[64,14],n:[64,23],p:[66,50],a1:[72,37,66,48],l1:[46,51,46,70],l2:[76,70,95,68]},
+ fig4:{h:[18,64],n:[27,65],p:[64,65],a1:[46,55,60,46],l1:[58,42,76,38],l2:[74,48,56,44]},
+ hamlie:{h:[18,64],n:[27,65],p:[64,65],a1:[44,54,54,38],l1:[63,42,61,18],l2:[84,66,104,66],x:[["band",54,38,61,18]]},
+ slider:{h:[18,64],n:[27,65],p:[64,65],a1:[46,54,60,48],l1:[62,42,82,30],l2:[84,66,104,66]},
+ bridge:{h:[16,66],n:[25,66],p:[62,46],a1:[40,69,54,69],l1:[80,44,84,70]},
+ hipstand:{h:[64,8],n:[64,17],p:[66,42],a1:[72,30,66,40],l1:[50,52,46,70],l2:[80,56,94,70]},
+ hinge:{h:[30,30],n:[40,32],p:[68,38],a1:[40,45,41,56],l1:[62,54,60,70]},
+ seat4:{h:[46,16],n:[52,24],p:[64,48],a1:[50,36,46,44],l1:[44,48,44,70],l2:[46,42,40,47],x:[["chair"]]},
+ backext:{h:[68,7],n:[65,16],p:[60,40],a1:[72,28,63,38],l1:[60,55,60,70]},
+ pigeon:{h:[55,24],n:[56,33],p:[62,60],a1:[48,48,44,66],l1:[44,66,58,69],l2:[82,67,104,69]},
+ couch:{h:[74,14],n:[74,23],p:[76,50],a1:[82,36,76,48],l1:[56,51,56,70],l2:[90,70,99,46],x:[["wall",103]]},
+ frog:{h:[30,48],n:[38,46],p:[78,50],a1:[32,58,30,70],l1:[74,70,94,70]},
+ wgs:{h:[32,36],n:[40,40],p:[62,52],a1:[44,24,48,8],a2:[40,56,42,70],l1:[40,50,40,70],l2:[84,62,104,70]},
+ birddog:{h:[30,39],n:[40,42],p:[76,42],a1:[26,40,12,38],a2:[40,56,40,70],l1:[94,42,112,42],l2:[76,70,94,70]},
+ deadbug:{h:[18,64],n:[27,65],p:[62,65],a1:[29,48,31,32],a2:[14,58,5,60],l1:[62,44,80,44],l2:[84,60,104,57]},
+ sideplank:{h:[26,31],n:[34,36],p:[64,51],a1:[35,68,50,70],a2:[50,40,62,48],l1:[84,60,104,70]},
+ curlup:{h:[20,57],n:[28,62],p:[62,66],a1:[42,68,56,66],l1:[76,48,86,70],l2:[84,67,104,67]},
+ kneeschest:{h:[18,64],n:[27,65],p:[62,65],a1:[44,54,54,44],l1:[50,42,66,40]}
+};
+function fig(k){const f=FIG[k];if(!f)return "";
+  const ln=(a,b,op)=>'<polyline points="'+a.join(",")+" "+b[0]+","+b[1]+" "+b[2]+","+b[3]+'" fill="none" stroke="#f6e3bd" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="'+op+'"/>';
+  let g='<line x1="4" y1="74" x2="116" y2="74" stroke="rgba(255,255,255,.2)" stroke-width="2" stroke-linecap="round"/>';
+  (f.x||[]).forEach(x=>{if(x[0]==="wall")g+='<line x1="'+x[1]+'" y1="10" x2="'+x[1]+'" y2="74" stroke="rgba(255,255,255,.25)" stroke-width="3"/>';
+    if(x[0]==="chair")g+='<path d="M54 53H80M80 26V73M58 53V73" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="3" stroke-linecap="round"/>';
+    if(x[0]==="band")g+='<line x1="'+x[1]+'" y1="'+x[2]+'" x2="'+x[3]+'" y2="'+x[4]+'" stroke="#ff8f70" stroke-width="2" stroke-dasharray="3 3"/>';});
+  if(f.a2)g+=ln(f.n,f.a2,.4);if(f.l2)g+=ln(f.p,f.l2,.4);
+  g+='<path d="M'+f.n.join(" ")+(f.c?" Q"+f.c.join(" ")+" ":" L")+f.p.join(" ")+'" fill="none" stroke="#63e6c4" stroke-width="6" stroke-linecap="round"/>';
+  if(f.l1)g+=ln(f.p,f.l1,1);if(f.a1)g+=ln(f.n,f.a1,1);
+  g+='<circle cx="'+f.h[0]+'" cy="'+f.h[1]+'" r="6.5" fill="#f6e3bd"/>';
+  return '<svg class="fig" viewBox="0 0 120 80">'+g+'</svg>';}
+function demo(q){return "https://www.youtube.com/results?search_query="+encodeURIComponent(q);}
+
+/* name, area, short cue, how-to steps, you should feel, avoid */
+const DRILLS={
+ catcow:["Cat-cow","back","Slowly round your spine up, then let it arch down. Move with your breath.",["Start on hands and knees, hands under shoulders, knees under hips.","Breathe out and round your whole spine toward the ceiling, tucking chin and tailbone.","Breathe in and let your belly drop, lifting chest and tailbone.","Move slowly, about 4 seconds each way."],"A gentle stretch along the whole spine, no pain.","Forcing the end of the arch. Keep it comfortable."],
+ child:["Child's pose","back","Knees wide, sit back toward your heels, arms long. Breathe into your lower back.",["Kneel with big toes together and knees apart.","Sit your hips back toward your heels.","Walk your hands forward and rest your forehead down.","Take slow breaths into your lower back and sides."],"A long, easy stretch through the lower back and hips.","Pushing through knee pain. Put a cushion between hips and heels if needed."],
+ ninety:["90/90 hip switches","hips","Both knees bent to 90 degrees. Rotate knees side to side, chest tall.",["Sit on the floor, one leg bent in front and one bent to the side, both knees at about 90 degrees.","Keep your chest tall. Use your hands behind you for support.","Lift both knees and rotate them to the other side.","Pause for a breath on each side, then switch."],"Stretch deep in the outer hip of the front leg and the inner hip of the back leg.","Rounding your lower back or rushing. Slow and controlled."],
+ hipflex:["Half-kneeling hip flexor stretch","hips","Back knee down. Tuck your tailbone and squeeze the back glute.",["Kneel on one knee with the other foot flat in front.","Tuck your tailbone under, as if zipping up tight trousers.","Squeeze the glute of the kneeling leg and keep your ribs down.","Shift forward only a little. Reach the same-side arm up for more."],"A stretch at the front of the hip and thigh of the kneeling leg.","Arching your lower back or lunging far forward. The tuck does the work."],
+ fig4:["Figure-4 glute stretch","hips","On your back, ankle over the opposite knee. Pull both legs toward your chest.",["Lie on your back with knees bent.","Cross one ankle over the opposite knee.","Reach through and hold behind the thigh of the bottom leg.","Pull gently toward your chest and keep your head down."],"A stretch in the outer hip and glute of the crossed leg.","Lifting your head and shoulders or pulling on the knee joint."],
+ hamlie:["Lying hamstring stretch","hams","One leg up with a towel or band around the foot. Knee slightly soft, other leg flat.",["Lie on your back and loop a towel or band around one foot.","Raise that leg until you feel a stretch behind the thigh.","Keep the knee slightly soft and the other leg flat on the floor.","Hold steady for 30 seconds. Breathe out and relax into it."],"A firm but comfortable pull in the middle of the back of the thigh.","Bouncing, or pulling so hard it burns behind the knee."],
+ slider:["Hamstring nerve slider","hams","Hold behind your thigh. Straighten and bend the knee smoothly, no holding.",["Lie on your back and hold behind one thigh, hip bent to 90 degrees.","Slowly straighten the knee while pointing your toes away.","Bend the knee again while pulling your toes back toward you.","Keep it smooth and rhythmic, about 2 seconds each way. Do not hold the end position."],"Light tension that comes and goes. It should never hurt or tingle strongly.","Holding at the top or pushing into pins and needles. This is a glide, not a stretch."],
+ bridge:["Glute bridge","back","Lift your hips by squeezing your glutes. Pause 2 seconds at the top.",["Lie on your back with knees bent and feet flat, hip-width apart.","Press through your heels and squeeze your glutes to lift your hips.","Stop when shoulders, hips and knees are in one line.","Pause 2 seconds, then lower slowly."],"Your glutes working, with a little hamstring.","Arching your lower back to get higher. If you feel it in your back, lower the height."],
+ hipstand:["Standing hip flexor stretch","hips","Short lunge, tuck your tailbone, squeeze the back glute, reach that arm up.",["Stand and step one foot back into a short lunge.","Keep the back heel lifted and both feet pointing forward.","Tuck your tailbone and squeeze the back glute.","Reach the arm on the back-leg side up toward the ceiling."],"A stretch at the front of the back leg's hip.","Leaning back or arching the lower back."],
+ hinge:["Standing hamstring hinge","hams","Soft knees. Push your hips back with a flat back until the hamstrings pull, then stand.",["Stand with feet hip-width apart and knees slightly soft.","Push your hips straight back, like closing a door with your backside.","Keep your back flat and let your hands slide down your thighs.","Stop when the hamstrings pull, then squeeze glutes to stand. Slow reps."],"A stretch high in the back of both thighs.","Rounding your back to reach lower. Depth comes from the hips."],
+ seat4:["Seated figure-4","hips","Sitting tall, ankle over the opposite knee. Lean your chest forward with a straight back.",["Sit tall near the front of your chair.","Rest one ankle on the opposite knee.","Keeping your back straight, hinge your chest forward from the hips.","Hold where you feel the outer hip stretch."],"A stretch in the outer hip and glute of the crossed leg.","Rounding your back or pressing hard on the knee."],
+ backext:["Standing back extension","back","Hands on hips, gently lean back and return. Small, easy reps.",["Stand tall with your hands on the back of your hips.","Gently lean back, letting your hips move slightly forward.","Return to standing.","Repeat slowly. Small range is fine."],"A mild opening through the lower back, a relief after sitting.","Pushing into pain or dropping your head far back."],
+ pigeon:["Pigeon or figure-4","hips","Front shin across, back leg long. Ease into the outer hip.",["From hands and knees, bring one knee forward toward the same-side wrist.","Angle the front shin across and slide the back leg straight behind you.","Keep hips square to the floor. Stay tall or fold forward over the shin.","If the knee complains, do the figure-4 on your back instead."],"A deep stretch in the outer hip of the front leg.","Any pain in the front knee. Swap to figure-4."],
+ couch:["Couch stretch","hips","Back shin up against a wall or sofa. Tall chest, tailbone tucked.",["Kneel facing away from a wall or sofa, one shin up against it, knee on a cushion.","Step the other foot forward into a lunge.","Tuck your tailbone and squeeze the back glute.","Slowly bring your chest upright as far as is comfortable."],"A strong stretch through the front of the thigh and hip.","Arching the lower back to get upright. Start further from the wall if it is too intense."],
+ frog:["Frog rock-back","hips","On hands and knees, knees wide. Rock your hips back and forward.",["Start on hands and knees and widen your knees as far as is comfortable.","Keep shins parallel and feet in line with knees.","Rock your hips back toward your heels.","Rock forward again. Slow and smooth."],"A stretch along the inner thighs and groin.","Letting your lower back round heavily, or forcing the knees wider."],
+ wgs:["World's greatest stretch","hips","Long lunge, inside elbow toward the floor, then rotate that arm to the ceiling.",["Step into a long lunge with both hands on the floor inside the front foot.","Drop the inside elbow toward the floor.","Then rotate that arm up toward the ceiling and follow it with your eyes.","Return the hand to the floor and repeat."],"Hip flexor of the back leg, groin of the front leg and your mid-back rotating.","Letting the back knee sag (rest it on the floor if needed)."],
+ birddog:["Bird dog","back","Reach the opposite arm and leg long. Keep hips level. Slow alternating reps.",["Start on hands and knees with a flat back.","Brace your stomach lightly, as if about to be poked.","Slide one arm forward and the opposite leg back until both are in line with your body.","Hold 5 to 8 seconds, return, and switch sides."],"Your core and glutes working to hold you steady.","Hips tilting, or the lower back arching as the leg lifts."],
+ deadbug:["Dead bug","back","Lower the opposite arm and leg. Keep your lower back on the floor.",["Lie on your back, arms straight up, hips and knees at 90 degrees.","Gently press your lower back toward the floor.","Lower one arm overhead and the opposite leg toward the floor.","Return and switch sides. Go only as low as your back stays down."],"Deep stomach muscles working.","Your lower back lifting off the floor."],
+ sideplank:["Side plank","back","Elbow under shoulder, hips high. Bend the knees if needed.",["Lie on your side with your elbow directly under your shoulder.","Stack your feet, or bend your knees for an easier version.","Lift your hips so your body forms a straight line.","Hold, breathing normally."],"The side of your waist and hip working.","Hips sagging or rolling forward."],
+ curlup:["McGill curl-up","back","One knee bent, hands under your lower back. Lift head and shoulders slightly and hold.",["Lie on your back with one knee bent and the other leg straight.","Slide your hands under the natural arch of your lower back.","Brace, then lift your head and shoulders just off the floor.","Hold 8 to 10 seconds, lower, and repeat. Switch the bent leg halfway."],"Your stomach muscles tightening without your back moving.","Curling up high like a sit-up, or pulling your chin to your chest."],
+ kneeschest:["Knees to chest","back","Hug both knees in and rock gently.",["Lie on your back.","Bring both knees toward your chest and hold them.","Rock gently side to side.","Breathe slowly and let your lower back relax."],"A gentle release in the lower back.","Pulling hard. Easy pressure is enough."]
+};
+const ROUT={
+ daily:["Daily reset",9,"Hips, hamstrings and lower back. Aim for most days.",[["catcow",60,1],["child",60,1],["ninety",60,1],["hipflex",45,2],["fig4",45,2],["hamlie",30,2],["slider",30,2],["bridge",60,1]]],
+ desk:["Desk break",3,"For the middle of a long sitting block at work.",[["hipstand",30,2],["hinge",45,1],["seat4",30,2],["backext",30,1]]],
+ legs:["After leg day",9,"Longer holds while you are warm. Good after lower-body sessions.",[["pigeon",60,2],["couch",60,2],["hamlie",45,2],["frog",60,1],["wgs",45,2],["child",60,1]]],
+ back:["Back care",6,"Core stability for a tight lower back, including the three McGill exercises.",[["catcow",60,1],["curlup",60,1],["birddog",60,1],["sideplank",30,2],["bridge",60,1],["kneeschest",60,1]]]
+};
+ROUT.ham30=["Hamstring 30-second hold",1,"The dose from a 6-week trial of 93 adults: one 30-second hold per leg, once a day, 5 days a week.",[["hamlie",30,2]],"studied"];
+ROUT.mcgill=["McGill big 3",4,"Curl-up, side plank and bird dog. Tested for low back pain, though only in small trials.",[["curlup",75,1],["sideplank",40,2],["birddog",90,1]],"studied"];
+const MOB={};Object.keys(ROUT).forEach(id=>{const r=ROUT[id];MOB[id]={name:r[0],mins:r[1],desc:r[2],tag:r[4],steps:r[3].map(s=>{const d=DRILLS[s[0]];return [d[0],d[2],s[1],s[2],d[1],s[0]];})};});
+const EVID=[
+ ["Hamstrings",["<b>Hold for 30 seconds, once a day.</b> In a trial of 93 adults with tight hamstrings, stretching 5 days a week for 6 weeks improved flexibility, and 30-second holds worked as well as 60 seconds or three times a day.","<b>Nerve sliders can beat static stretching.</b> In 120 adults with short hamstrings, a gentle nerve-sliding drill improved straight-leg raise more than a static stretch. That was measured right after one session, so the lasting effect is less certain.","<b>Slow lowering under load helps too.</b> Six trials found eccentric training improves leg flexibility, which is why Romanian deadlifts with a slow lowering phase belong in your gym plan."],
+  [["Bandy 1997","https://pubmed.ncbi.nlm.nih.gov/9327823/"],["Castellote-Caballero 2014","https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4590905/"],["Medeiros 2016","https://pubmed.ncbi.nlm.nih.gov/27458757/"],["O'Sullivan 2012","https://pubmed.ncbi.nlm.nih.gov/22522590/"]]],
+ ["Hips",["<b>Sitting is a main cause of stiff hip flexors,</b> and stretches of up to 2 minutes do not harm performance, according to a 2021 review.","<b>Total weekly time is what counts:</b> about 5 minutes per muscle group per week, over 5 or more days.","<b>Deep, controlled strength work</b> such as split squats improves range of motion about as much as stretching. I did not find a long-term trial of hip flexor stretching alone, so the hip drills here follow the general stretching evidence."],
+  [["Konrad 2021","https://pubmed.ncbi.nlm.nih.gov/33671271/"],["Thomas 2018","https://pubmed.ncbi.nlm.nih.gov/29506306/"],["Afonso 2021","https://doi.org/10.3390/healthcare9040427"]]],
+ ["Lower back",["<b>Movement is the treatment.</b> A Cochrane review of 249 trials found exercise reduces long-lasting low back pain, with no single type clearly best.","<b>Walking protects your back.</b> In a trial of 701 adults who had recovered from back pain, a walking programme roughly doubled the time before it came back (208 versus 112 days).","<b>The McGill exercises</b> (curl-up, side plank, bird dog) are widely used, but the trials are small: one of 34 adults found them about as good as standard physiotherapy. Treat them as a sensible option, not a proven best."],
+  [["Hayden 2021","https://doi.org/10.1002/14651858.CD009790.pub2"],["WalkBack 2024","https://www.news-medical.net/news/20240620/Walking-reduces-recurrence-of-low-back-pain-study-finds.aspx"],["Ghorbanpour 2018","https://pubmed.ncbi.nlm.nih.gov/29706690/"]]]
+];
+const FORM={
+"Flat bench press (kg per side)":"Feet flat, shoulder blades squeezed back and down. Lower the bar to mid-chest with elbows about 45 degrees from your sides, then press up and slightly back.",
+"Smith machine chest press":"Set the bench so the bar meets mid-chest. Shoulder blades pinned back, lower under control until upper arms pass parallel, press without locking hard.",
+"Dumbbell chest press":"Start with dumbbells over your chest, palms forward. Lower until elbows dip just below the bench, elbows about 45 degrees out, then press up and slightly together.",
+"Incline dumbbell press":"Bench at 30 to 45 degrees. Lower dumbbells to the upper chest with forearms vertical, then press up. Keep shoulder blades back.",
+"Incline Smith press":"Bench at about 30 degrees with the bar landing on your upper chest. Control the lowering and keep your elbows under the bar.",
+"Machine chest press":"Set the seat so handles line up with mid-chest. Keep shoulders down and back against the pad and press without shrugging.",
+"Chest fly machine":"Slight bend in the elbows, kept fixed. Open until you feel a chest stretch, then squeeze the handles together and pause.",
+"Cable fly":"Step forward, slight forward lean, soft elbows. Bring hands together in a wide hugging arc and control the return.",
+"Push-up":"Hands just outside shoulders, body in one straight line. Lower chest to the floor with elbows about 45 degrees out, then push away.",
+"Lat pulldown":"Grip just outside shoulders, lean back slightly. Pull elbows down to your sides until the bar reaches your upper chest. No swinging.",
+"Seated row":"Sit tall with a slight knee bend. Pull the handle to your lower ribs, squeeze shoulder blades together, then let the arms go long without rounding.",
+"Chest-supported row":"Chest on the pad, neck neutral. Pull elbows back past your ribs and squeeze, then lower fully.",
+"Single-arm dumbbell row":"One hand and knee on a bench, flat back. Pull the dumbbell toward your hip, elbow close to your side, without twisting.",
+"Assisted pull-up":"Start from a full hang. Pull your chest toward the bar by driving elbows down, then lower all the way under control.",
+"Straight-arm pulldown":"Arms nearly straight, slight hip hinge. Sweep the bar down to your thighs using your lats, then return slowly.",
+"Back extension":"Pad just below the hips. Hinge down with a flat back, then lift until your body is straight. Do not over-arch at the top.",
+"Dumbbell shoulder press":"Seated with back supported. Start at ear height with forearms vertical, press overhead, lower under control.",
+"Machine shoulder press":"Handles start level with your ears. Press up without arching your lower back or shrugging.",
+"Lateral raise":"Slight bend in the elbows. Raise out to the sides to shoulder height, leading with the elbows, then lower slowly. Light weight.",
+"Rear delt fly":"Chest against the pad, arms nearly straight. Open out and back by squeezing the rear shoulders, not by shrugging.",
+"Face pull":"Rope at face height. Pull toward your eyes with elbows high, finishing with hands beside your ears.",
+"Dumbbell biceps curl":"Elbows pinned by your sides. Curl up without swinging, squeeze, and lower for about 3 seconds.",
+"Cable curl":"Elbows fixed at your sides, wrists straight. Curl to the top and lower under tension.",
+"Hammer curl":"Palms facing each other throughout. Curl with elbows still and lower slowly.",
+"Triceps pushdown":"Elbows tucked at your sides. Push down until arms are straight, then let forearms rise to just above parallel.",
+"Overhead triceps extension":"Elbows pointing forward, upper arms still. Lower behind your head for a full stretch, then extend.",
+"Leg press":"Feet shoulder-width on the plate. Lower until knees reach about 90 degrees with your lower back flat on the pad, then press through the whole foot. Do not lock the knees hard.",
+"Bulgarian split squat":"Back foot on a bench, front foot far enough forward that the knee stays over the foot. Drop straight down, torso slightly forward, and push through the front heel.",
+"Dumbbell reverse lunge":"Step back and lower until both knees are near 90 degrees. Push through the front foot to return. Stay tall.",
+"Goblet squat":"Hold a dumbbell at your chest. Sit down between your hips with knees tracking over toes, chest up, as deep as you can control.",
+"Smith machine squat":"Feet slightly in front of the bar. Sit back and down to at least parallel, keeping your whole foot planted.",
+"Leg extension":"Knee lined up with the machine pivot. Straighten fully, pause 1 second, and lower slowly.",
+"Glute machine":"Brace your trunk and push back through the heel using your glute. Avoid arching your lower back to gain range.",
+"Hip thrust":"Upper back on a bench, feet flat. Drive hips up until your body is level, chin tucked, squeeze for 1 second, and lower.",
+"Hip abduction machine":"Sit tall and push knees out under control. Pause at the widest point and return slowly.",
+"Romanian deadlift":"Soft knees. Push hips back with a flat back, sliding the weight down your thighs to mid-shin, taking 3 seconds. Stand by squeezing your glutes.",
+"Seated leg curl":"Pad just above your heels, thighs locked in. Curl fully under the seat and return slowly.",
+"Lying leg curl":"Hips pressed into the pad. Curl heels toward your backside and lower under control.",
+"Seated calf raise":"Balls of your feet on the platform. Lower the heels for a full stretch, pause, then rise as high as you can.",
+"Standing calf raise":"Legs straight, not locked. Full stretch at the bottom, 1-second pause at the top.",
+"Plank (seconds as reps)":"Elbows under shoulders, body in a straight line. Squeeze glutes and brace your stomach. Stop when your hips start to sag.",
+"Cable crunch":"Kneel holding the rope by your head. Curl your ribs toward your hips by rounding your spine, hips still.",
+"Dead bug":"Lower back pressed to the floor. Lower the opposite arm and leg slowly, then return and switch.",
+"Pallof press":"Side-on to the cable, hands at your chest. Press straight out and resist the pull to rotate. Hold 2 seconds.",
+"Hanging knee raise":"From a dead hang, lift knees above hip height by curling your pelvis up. Lower without swinging."
 };
 const AREA={hips:"Hips",hams:"Hamstrings",back:"Lower back"};
 
@@ -356,17 +539,21 @@ const LEARN=[
 ];
 
 /* ---------------- state ---------------- */
-let state=load(), gymGroup="Chest", hMetric="weight", segSel={hips:null,hams:null,back:null};
+let state=load(), hMetric="weight", segSel={hips:null,hams:null,back:null};
 function load(){
   let s=null; try{s=JSON.parse(localStorage.getItem(KEY));}catch(e){}
   if(!s||!Array.isArray(s.entries)) s={entries:[]};
   ["lifts","mob","checks","scans","customEx"].forEach(k=>{ if(!Array.isArray(s[k])) s[k]=[]; });
   if(Array.isArray(s.exercises)){ s.exercises.forEach(x=>{ if(x&&x.name&&!LIB.some(l=>l.name===x.name)&&!s.customEx.some(c=>c.name===x.name)) s.customEx.push({name:x.name,group:"Other"}); }); delete s.exercises; }
   if(!s.stepsTarget||s.stepsTarget===10000) s.stepsTarget=8000;
+  s.lifts=splitLifts(s.lifts); s.lifts.forEach(l=>{if(l.wu&&!l.t)l.t="w";delete l.wu;}); if(s.rest==null) s.rest=90;
+  if(s.prep==null||s.prep===10&&!s.prepSet) s.prep=3; if(s.voice==null) s.voice=true; if(!s.exCfg) s.exCfg={};
+  const td=todayStr(); s.draft=(s.draft&&s.draft[td])?{[td]:s.draft[td]}:{};
   if(!s.sleepTarget) s.sleepTarget=7; if(!s.gymTarget) s.gymTarget=3; if(!s.mobTarget) s.mobTarget=4;
   return s;
 }
-function save(){ try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){} }
+function splitLifts(L){const o=[];L.forEach(l=>{const n=Math.max(1,Math.round(l.s||1));for(let i=0;i<n;i++)o.push(Object.assign({},l,{id:i?l.id+"-"+i:l.id,s:1,pb:i?false:!!l.pb}));});return o;}
+function save(quiet){ typeCache=null; if(!quiet){state.updated=Date.now();syncQueue();} try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){} }
 const $=id=>document.getElementById(id);
 function esc(t){return String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function todayStr(){const d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,10);}
@@ -417,6 +604,7 @@ function lineChart(el,pts,o){
 /* ---------------- HOME ---------------- */
 const HM={weight:{label:"Weight",unit:"kg",dec:1,good:-1,raw:true},steps:{label:"Steps",unit:"",dec:0,good:1,target:()=>state.stepsTarget},
   sleep:{label:"Sleep",unit:"h",dec:1,good:1,target:()=>state.sleepTarget},rhr:{label:"Resting HR",unit:"bpm",dec:0,good:-1},hrv:{label:"HRV",unit:"ms",dec:0,good:1}};
+const TAG={good:"On track",watch:"Keep an eye",work:"Needs work",info:"Getting started"};
 function monthAvg(k){const m={};state.entries.forEach(e=>{if(e[k]!=null)(m[e.date.slice(0,7)]=m[e.date.slice(0,7)]||[]).push(e[k]);});const o={};Object.keys(m).forEach(x=>{o[x]=mean(m[x]);});return o;}
 function sessions(list,from,to){return new Set(list.filter(l=>l.date>=from&&l.date<=to).map(l=>l.date)).size;}
 function deltaHtml(cur,prev,good,lbl){
@@ -424,31 +612,122 @@ function deltaHtml(cur,prev,good,lbl){
   const pct=(cur-prev)/Math.abs(prev)*100,flat=Math.abs(pct)<1,cls=flat?"":((pct>0)===(good>0)?"up":"down");
   return '<div class="d"><span class="'+cls+'">'+(flat?"=":(pct>0?"▲":"▼"))+" "+fmt(Math.abs(pct),0)+'%</span> '+lbl+'</div>';
 }
+function bedMin(b){const p=String(b).split(":"),h=+p[0];return (h<15?h+24:h)*60+(+p[1]||0);}
+function minStr(m){m=Math.round(m)%1440;return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");}
+function median(a){const s=[...a].sort((x,y)=>x-y);return s[Math.floor(s.length/2)];}
+function monYear(ds){return new Date(ds+"T12:00:00Z").toLocaleDateString(undefined,{month:"long",timeZone:"UTC"});}
+function strengthProg(){
+  const by={};state.lifts.forEach(l=>{if(!isTop(l))return;const o=by[l.ex]=by[l.ex]||{};o[l.date]=Math.max(o[l.date]||0,score(l));});
+  const out=[];Object.keys(by).forEach(n=>{const ds=Object.keys(by[n]).sort();if(ds.length>=2&&by[n][ds[0]]>0)out.push({n,g:exInfo(n).group,pct:(by[n][ds[ds.length-1]]-by[n][ds[0]])/by[n][ds[0]]*100});});
+  return out;
+}
+function analyse(){
+  const t=todayStr(),E=state.entries,out=[];
+  /* weight */
+  const wE=E.filter(e=>e.weight!=null);let wDown=false;
+  if(wE.length>=2){
+    const f=wE[0],l=wE[wE.length-1],ch=l.weight-f.weight,span=Math.max(1,dayIndex(l.date,f.date)),rate=ch/span*7,age=dayIndex(t,l.date);let tag,p;wDown=ch<0;
+    if(rate<=-0.2&&rate>=-0.75){tag="good";p="That is a steady, sustainable pace for losing fat while keeping muscle. The target zone is about 0.25 to 0.5 kg a week.";}
+    else if(rate<-0.75){tag="watch";p="That is faster than ideal. Losing more than about 0.75 kg a week raises the risk of losing muscle along with fat.";}
+    else if(rate<-0.02){tag="watch";p="That is the right direction, but slow. The target zone for steady fat loss is about 0.25 to 0.5 kg a week, so there is room to tighten up a little.";}
+    else{tag="work";p="Your weight is flat or rising, which means you are eating about as much as you burn, or more.";}
+    let h="You weigh <b>"+fmt(l.weight,1)+" kg</b>, "+(ch<0?"down":"up")+" <b>"+fmt(Math.abs(ch),1)+" kg</b> since "+nice(f.date,true)+". That works out to about <b>"+fmt(Math.abs(rate),2)+" kg a week</b>. "+p;
+    if(wE.length<5)h+=" This rests on only "+wE.length+" weigh-ins, so treat it as a rough picture for now.";
+    const sc=state.scans.filter(s=>s.bf!=null).pop();
+    if(sc)h+=" Your "+monYear(sc.date)+" body scan put body fat at "+fmt(sc.bf,1)+"%"+(sc.smm!=null?" with "+fmt(sc.smm,1)+" kg of muscle":"")+". A repeat scan would show how much of the change is fat.";
+    out.push({k:"Weight",tag,html:h,one:"Weight is "+(ch<0?"down ":"up ")+fmt(Math.abs(ch),1)+" kg"+(tag==="good"?" at a steady pace":""),
+      act:age>10?"Weigh in this week. Your last weigh-in was "+age+" days ago.":(tag==="work"||rate>-0.2?"Make your late dinner a little smaller and keep protein high, then check the scale again in a week.":"Keep going as you are and weigh in once a week.")});
+  }else out.push({k:"Weight",tag:"info",one:"Weight tracking is just starting",html:wE.length?"You have one weigh-in so far (<b>"+fmt(wE[0].weight,1)+" kg</b> on "+nice(wE[0].date,true)+"). Add another next week and your rate of change will appear here.":"No weigh-ins yet. One a week is all this needs.",act:"Weigh in once a week, in the morning before food."});
+  /* activity */
+  const sE=E.filter(e=>e.steps!=null);
+  if(sE.length>=7){
+    const a=sE.slice(-30),b=sE.slice(-60,-30),avg=mean(a.map(e=>e.steps)),hit=a.filter(e=>e.steps>=state.stepsTarget).length,T=state.stepsTarget;
+    const tag=avg>=T?"good":(avg>=T*.8?"watch":"work");
+    let h="Over your last "+a.length+" tracked days you averaged <b>"+fmt(avg)+" steps</b> a day and reached your "+fmt(T)+" target on <b>"+hit+" of "+a.length+"</b> days.";
+    if(b.length>=14){const pb=mean(b.map(e=>e.steps)),df=(avg-pb)/pb*100;h+=" The "+b.length+" days before that averaged "+fmt(pb)+", so you are "+(Math.abs(df)<5?"about level":(df>0?"up "+fmt(df,0)+"%":"down "+fmt(-df,0)+"%"))+".";}
+    h+=" Large studies put most of the health benefit of walking at around 8,000 steps a day.";
+    const zE=E.filter(e=>e.azm!=null).slice(-28);
+    if(zE.length>=7){const z=mean(zE.map(e=>e.azm))*7;h+=" Your watch also logged about <b>"+fmt(z)+" minutes a week</b> with your heart rate raised, "+(z>=150?"above the 150-minute health guideline. So your training intensity is fine"+(avg<T?", and it is everyday walking that is low.":"."):"below the 150-minute health guideline.");}
+    out.push({k:"Daily movement",tag,html:h,one:"Steps average "+fmt(avg)+" a day",act:avg<T?"Add one 10 to 15 minute walk a day, for example after dinner. That adds roughly 1,200 to 1,500 steps.":"Nothing to change. Keep your current routine."});
+  }else out.push({k:"Daily movement",tag:"info",one:"No step data yet",html:"No step data yet. It arrives with your monthly import.",act:"Import your monthly data file on the Data tab."});
+  /* sleep */
+  const zz=E.filter(e=>e.sleep!=null).slice(-30);
+  if(zz.length>=5){
+    const avg=mean(zz.map(e=>e.sleep)),short=zz.filter(e=>e.sleep<6).length,full=zz.filter(e=>e.sleep>=7).length,tag=avg>=7?"good":(avg>=6.5?"watch":"work");
+    let h="Across your last "+zz.length+" tracked nights you slept <b>"+fmt(avg,1)+" hours</b> on average. <b>"+short+"</b> night"+(short===1?" was":"s were")+" under 6 hours and <b>"+full+"</b> reached 7 or more.";
+    const beds=zz.filter(e=>e.bed).map(e=>bedMin(e.bed));
+    if(beds.length>=5){const lo=Math.min(...beds),hi=Math.max(...beds);h+=" You typically fall asleep around <b>"+minStr(median(beds))+"</b>, but it ranges from "+minStr(lo)+" to "+minStr(hi)+(hi-lo>150?", which is a wide swing. Irregular sleep times are linked with worse health outcomes, separately from how long you sleep.":".");}
+    h+=" Sleep matters for your goal: in a controlled trial, people on the same diet lost 55% less fat, and more muscle, when sleep was cut short.";
+    const both=E.filter(e=>e.sleep!=null&&e.hrv!=null),sh=both.filter(e=>e.sleep<6).map(e=>e.hrv),lg=both.filter(e=>e.sleep>=6.5).map(e=>e.hrv);
+    if(sh.length>=3&&lg.length>=3&&mean(lg)-mean(sh)>3)h+=" Your own data shows it too: your HRV averaged <b>"+fmt(mean(sh))+" ms</b> after short nights and <b>"+fmt(mean(lg))+" ms</b> after longer ones, so your body is visibly less recovered when sleep is cut.";
+    out.push({k:"Sleep",tag,html:h,one:"Sleep averages "+fmt(avg,1)+" hours",act:avg<7?"Pick one lights-out time for work nights and hold it within an hour. Aim for 7 hours in bed before trying to go earlier.":"Keep your current sleep routine."});
+  }else out.push({k:"Sleep",tag:"info",one:"No sleep data yet",html:"No sleep data yet. It arrives with your monthly import.",act:"Wear your Fitbit to bed so sleep is captured."});
+  /* heart */
+  const rE=E.filter(e=>e.rhr!=null),vE=E.filter(e=>e.hrv!=null);
+  if(rE.length>=10){
+    const a=mean(rE.slice(0,7).map(e=>e.rhr)),b=mean(rE.slice(-7).map(e=>e.rhr)),d=b-a;
+    let h="Your resting heart rate averaged <b>"+fmt(b)+" bpm</b> over the most recent week of data, "+(Math.abs(d)<1.5?"about level with":(d<0?"down from":"up from"))+" <b>"+fmt(a)+" bpm</b> when tracking began on "+nice(rE[0].date,true)+". A lower resting heart rate generally reflects a fitter heart, and 60 to 70 is a healthy range for an active adult.";
+    let vd=0;
+    if(vE.length>=10){const va=mean(vE.slice(0,7).map(e=>e.hrv)),vb=mean(vE.slice(-7).map(e=>e.hrv));vd=vb-va;h+=" Your HRV, a sign of how recovered your nervous system is, averaged <b>"+fmt(vb)+" ms</b>, "+(Math.abs(vd)<4?"about level with":(vd>0?"up from":"down from"))+" "+fmt(va)+" ms at the start. Higher is better, and it is personal, so compare it with your own past and not with other people.";}
+    const tag=(d<=1.5&&vd>=-4)?"good":"watch";
+    out.push({k:"Heart and recovery",tag,html:h,one:"Resting heart rate is "+fmt(b)+" bpm"+(d<-1.5?" and falling":""),act:tag==="good"?"Nothing to change. These improve slowly with regular training and better sleep.":"Prioritise sleep this week and keep training a little easier if you feel run down."});
+  }else out.push({k:"Heart and recovery",tag:"info",one:"No heart data yet",html:"No heart-rate data yet. It arrives with your monthly import.",act:"Import your monthly data file on the Data tab."});
+  /* strength */
+  const g1=sessions(state.lifts,shiftDay(t,-27),t),sp=strengthProg();
+  if(state.lifts.length){
+    let h="You logged <b>"+g1+" gym session"+(g1===1?"":"s")+"</b> in the last 4 weeks, which is "+fmt(g1/4,1)+" a week against your goal of "+state.gymTarget+".",avg=null;
+    if(sp.length){avg=mean(sp.map(p=>p.pct));const top=[...sp].sort((x,y)=>y.pct-x.pct)[0];
+      h+=" Across the "+sp.length+" exercise"+(sp.length>1?"s":"")+" with enough history, your estimated strength is "+(Math.abs(avg)<2?"holding steady":(avg>0?"up <b>"+fmt(avg,0)+"%</b>":"down <b>"+fmt(-avg,0)+"%</b>"))+" on average."+(top.pct>2?" Your best mover is "+esc(top.n)+" at +"+fmt(top.pct,0)+"%.":"");
+      if(wDown&&avg>=-2)h+=" Holding or gaining strength while your weight drops is the clearest sign that you are losing fat and keeping muscle.";}
+    else h+=" Log the same exercises again next session and your strength trend will appear here.";
+    const sets=groupSets(shiftDay(t,-6),t);
+    const low=["Chest","Back","Quads & glutes","Hamstrings"].filter(g=>(sets[g]||0)<10);
+    if(g1&&low.length)h+=" In the last 7 days, "+low.join(", ").toLowerCase()+" got fewer than the roughly 10 weekly sets that research links with muscle growth.";
+    const tag=(g1/4>=state.gymTarget-.5&&(avg==null||avg>=-2))?"good":"watch";
+    out.push({k:"Strength training",tag,html:h,one:sp.length?"Strength is "+(Math.abs(avg)<2?"holding steady":(avg>0?"up "+fmt(avg,0)+"%":"down "+fmt(-avg,0)+"%")):"Gym sessions are being logged",act:g1/4<state.gymTarget-.5?"Log every session, even short ones, so this picture stays accurate.":"Try to beat last time by one rep or the next weight up on your first exercise each session."});
+  }else out.push({k:"Strength training",tag:"info",one:"No gym sessions logged yet",html:"No gym sessions logged yet. Once you log the same exercise on two different days, this will show whether you are getting stronger or holding strength while losing weight.",act:"Log your next session on the Gym tab as you train."});
+  /* mobility */
+  const m1=sessions(state.mob,shiftDay(t,-27),t);
+  if(state.mob.length){
+    const sec={hips:0,hams:0,back:0};state.mob.filter(m=>m.date>=shiftDay(t,-6)&&m.date<=t).forEach(m=>{Object.keys(sec).forEach(k=>{sec[k]+=(m.a&&m.a[k])||0;});});
+    let h="You did <b>"+m1+" mobility session"+(m1===1?"":"s")+"</b> in the last 4 weeks, which is "+fmt(m1/4,1)+" a week against your goal of "+state.mobTarget+". In the last 7 days you stretched your hips for "+fmt(sec.hips/60,1)+" minutes, hamstrings for "+fmt(sec.hams/60,1)+" and lower back for "+fmt(sec.back/60,1)+". The research-based minimum is about 5 minutes per area per week.";
+    const C=state.checks.filter(c=>c.toe!=null);if(C.length>=2)h+=" Your toe-touch gap has gone from "+fmt(C[0].toe,0)+" cm to <b>"+fmt(C[C.length-1].toe,0)+" cm</b>.";
+    const tag=m1/4>=state.mobTarget-.5?"good":"watch";
+    out.push({k:"Mobility",tag,html:h,one:"Mobility is at "+fmt(m1/4,1)+" sessions a week",act:tag==="good"?"Keep the routine going and repeat the check-in monthly.":"Short and often works best. Do the 9-minute Daily reset on most days."});
+  }else out.push({k:"Mobility",tag:"info",one:"No mobility sessions yet",html:"No mobility sessions logged yet. Tight hips, hamstrings and a tight lower back respond best to short, frequent stretching: about 5 minutes per area per week, spread over 5 or more days.",act:"Do the 9-minute Daily reset on the Mobility tab 4 times this week."});
+  return out;
+}
 function renderHome(){
+  const t=todayStr(),A=analyse(),good=A.filter(a=>a.tag==="good"),rest=A.filter(a=>a.tag==="work").concat(A.filter(a=>a.tag==="watch"),A.filter(a=>a.tag==="info"));
+  const dev=state.entries.filter(e=>e.steps!=null||e.rhr!=null||e.sleep!=null).pop();
+  $("sumDate").textContent=dev?"device data to "+nice(dev.date,true):"";
+  $("sumBody").innerHTML='<p class="lead"><b>'+good.length+' of '+A.length+'</b> areas are on track.</p>'+
+    (good.length?'<div class="sl up">Going well</div><ul>'+good.map(a=>'<li>'+a.one+'</li>').join("")+'</ul>':'')+
+    (rest.length?'<div class="sl co">Work on next</div><ul>'+rest.slice(0,3).map(a=>'<li><b>'+a.k+':</b> '+a.act+'</li>').join("")+'</ul>':'');
+  $("ana").innerHTML=A.map(a=>'<div class="card an"><div class="anh"><h3>'+a.k+'</h3><span class="tg '+a.tag+'">'+TAG[a.tag]+'</span></div><p>'+a.html+'</p><div class="do"><b>What to do:</b> '+a.act+'</div></div>').join("");
+
   const wE=state.entries.filter(e=>e.weight!=null);
   if(wE.length){
     const f=wE[0],l=wE[wE.length-1],ch=l.weight-f.weight;
     $("hW").innerHTML=fmt(l.weight,1)+"<small>kg</small>";
     $("hPill").innerHTML=wE.length>1?'<span class="pill '+(Math.abs(ch)<.05?"flat":(ch<0?"good":"bad"))+'">'+(ch>0?"+":"")+fmt(ch,1)+" kg since "+nice(f.date,true)+'</span>':"";
-    const sc=state.scans.filter(s=>s.bf!=null),ls=sc[sc.length-1];
+    const ls=state.scans.filter(s=>s.bf!=null).pop();
     $("hSub").innerHTML="Last weigh-in <b>"+nice(l.date,true)+"</b>"+(ls?" · body fat <b>"+fmt(ls.bf,1)+"%</b> ("+nice(ls.date,true)+")":"");
   }else{$("hW").textContent="-";$("hPill").innerHTML="";$("hSub").textContent="Add a weigh-in to start tracking.";}
   $("topSub").textContent=state.entries.length?"Tracking since "+nice(state.entries[0].date,true):"Your long-term progress";
 
-  /* compare cards */
-  let html="",lbls=[];
+  let html="";
   ["steps","sleep","rhr","hrv"].forEach(k=>{
     const m=monthAvg(k),ms=Object.keys(m).sort(),c=HM[k];if(!ms.length){html+='<div class="stat"><div class="l">'+c.label+'</div><div class="v">-</div><div class="d">no data yet</div></div>';return;}
-    const cur=ms[ms.length-1],prev=ms[ms.length-2];lbls.push(cur);
+    const cur=ms[ms.length-1],prev=ms[ms.length-2];
     html+='<div class="stat"><div class="l">'+c.label+' · '+monName(cur)+'</div><div class="v">'+fmt(m[cur],c.dec)+(c.unit?'<small>'+c.unit+'</small>':'')+'</div>'+deltaHtml(m[cur],prev?m[prev]:null,c.good,prev?"vs "+monName(prev):"first month")+'</div>';
   });
-  const t=todayStr(),g1=sessions(state.lifts,shiftDay(t,-27),t)/4,g0=sessions(state.lifts,shiftDay(t,-55),shiftDay(t,-28))/4;
+  const g1=sessions(state.lifts,shiftDay(t,-27),t)/4,g0=sessions(state.lifts,shiftDay(t,-55),shiftDay(t,-28))/4;
   const m1=sessions(state.mob,shiftDay(t,-27),t)/4,m0=sessions(state.mob,shiftDay(t,-55),shiftDay(t,-28))/4;
   html+='<div class="stat"><div class="l">Gym · last 4 weeks</div><div class="v">'+fmt(g1,1)+'<small>/wk</small></div>'+deltaHtml(g1,g0||null,1,g0?"vs 4 wks before":"goal "+state.gymTarget+"/wk")+'</div>';
   html+='<div class="stat"><div class="l">Mobility · last 4 weeks</div><div class="v">'+fmt(m1,1)+'<small>/wk</small></div>'+deltaHtml(m1,m0||null,1,m0?"vs 4 wks before":"goal "+state.mobTarget+"/wk")+'</div>';
-  $("cmp").innerHTML=html;$("cmpLbl").textContent="monthly averages";
+  $("cmp").innerHTML=html;
 
-  /* long-term chart */
   $("hChips").innerHTML=Object.keys(HM).map(k=>'<button data-m="'+k+'" class="'+(k===hMetric?"on":"")+'">'+HM[k].label+'</button>').join("");
   document.querySelectorAll("#hChips button").forEach(b=>b.onclick=()=>{hMetric=b.dataset.m;renderHome();});
   const c=HM[hMetric];let pts=[],first=null,last=null;
@@ -460,15 +739,12 @@ function renderHome(){
     caption:(c.raw?"Each dot is a weigh-in":"Each dot is a weekly average")+" · coral dashed line is your trend"+(c.target?" · yellow is your target":""),
     empty:"No "+c.label.toLowerCase()+" data yet. It fills in from your weigh-ins and monthly imports."});
 
-  /* strength */
-  const byEx={};state.lifts.forEach(l=>{(byEx[l.ex]=byEx[l.ex]||{})[l.date]=Math.max((byEx[l.ex]||{})[l.date]||0,score(l));});
-  const prog=[];Object.keys(byEx).forEach(n=>{const ds=Object.keys(byEx[n]).sort();if(ds.length>=2&&byEx[n][ds[0]]>0)prog.push({n,g:exInfo(n).group,pct:(byEx[n][ds[ds.length-1]]-byEx[n][ds[0]])/byEx[n][ds[0]]*100,from:ds[0]});});
+  const prog=strengthProg();
   if(!prog.length)$("hStr").innerHTML='<div class="empty">Log the same exercise on two different days and your strength change shows up here, by muscle group.</div>';
   else{const gg={};prog.forEach(p=>{(gg[p.g]=gg[p.g]||[]).push(p.pct);});
     $("hStr").innerHTML=GROUPS.filter(g=>gg[g]).map(g=>{const v=mean(gg[g]);return '<div class="li"><div class="n">'+g+'<small>'+gg[g].length+' exercise'+(gg[g].length>1?"s":"")+' tracked</small></div><div class="w '+(v>=0?"up":"down")+'">'+(v>=0?"+":"")+fmt(v,0)+'%</div></div>';}).join("")+
-    '<div class="tip">Change in estimated strength from your first to your latest session of each exercise. Holding steady while losing weight means you are keeping muscle.</div>';}
+    '<div class="tip">Change in estimated strength from your first to your latest session of each exercise.</div>';}
 
-  /* consistency bars */
   const ws=weekStart(t);let bars="",W=520,H=150,bw=22,maxv=Math.max(4,state.gymTarget,state.mobTarget);
   for(let i=7;i>=0;i--){const s=shiftDay(ws,-7*i),e=shiftDay(s,6),gv=sessions(state.lifts,s,e),mv=sessions(state.mob,s,e),x=30+(7-i)*60;
     const gh=gv/maxv*100,mh=mv/maxv*100;
@@ -476,84 +752,191 @@ function renderHome(){
       '<text x="'+(x+bw+1)+'" y="136" font-size="10" fill="#5d7886" text-anchor="middle">'+new Date(s+"T12:00:00Z").toLocaleDateString(undefined,{day:"numeric",month:"short",timeZone:"UTC"})+'</text>'+
       (gv?'<text x="'+(x+bw/2)+'" y="'+(112-gh)+'" font-size="10" fill="#8fa9b5" text-anchor="middle">'+gv+'</text>':'')+(mv?'<text x="'+(x+bw*1.5+3)+'" y="'+(112-mh)+'" font-size="10" fill="#8fa9b5" text-anchor="middle">'+mv+'</text>':'');}
   $("hCons").innerHTML='<svg class="chart" viewBox="0 0 '+W+' '+H+'">'+bars+'</svg><div class="caption"><span style="color:#18c1cc">■</span> gym &nbsp; <span style="color:#ff8f70">■</span> mobility</div>';
-
-  /* insights */
-  const ins=[],sl=monthAvg("sleep"),slm=Object.keys(sl).sort().pop(),st=monthAvg("steps"),stm=Object.keys(st).sort().pop();
-  if(slm&&sl[slm]<state.sleepTarget)ins.push("<b>Sleep is your biggest lever.</b> You averaged "+fmt(sl[slm],1)+" h in "+monName(slm)+". Under about 7 hours, more of the weight you lose comes from muscle instead of fat. Hold one lights-out time on work nights.");
-  if(!wE.length||dayIndex(t,wE[wE.length-1].date)>10)ins.push("<b>Weigh in this week.</b> One morning weigh-in a week is all the tracking this needs.");
-  if(m1<Math.min(3,state.mobTarget))ins.push("<b>Mobility: "+fmt(m1,1)+" sessions a week.</b> Tight hips, hamstrings and lower back respond to short, frequent work. Try the 9-minute Daily reset on most days.");
-  if(g1<state.gymTarget-.5&&state.lifts.length)ins.push("<b>Gym: "+fmt(g1,1)+" sessions a week</b> against your goal of "+state.gymTarget+". Log each session so your strength trend stays accurate.");
-  if(stm&&st[stm]<state.stepsTarget)ins.push("<b>Steps averaged "+fmt(st[stm])+" in "+monName(stm)+".</b> Around 8,000 a day is where most of the health benefit sits. A 10-minute walk after dinner closes most of the gap.");
-  if(!state.lifts.length)ins.push("<b>Start logging lifts.</b> Open the Gym tab during your next session and add each exercise as you go.");
-  $("hIns").innerHTML=ins.slice(0,3).map(x=>'<div class="note">'+x+'</div>').join("")||'<div class="note">Everything is on track. Keep doing what you are doing.</div>';
 }
 
 /* ---------------- GYM ---------------- */
-function liftsFor(n){return state.lifts.filter(l=>l.ex===n).sort((a,b)=>a.date<b.date?-1:(a.date>b.date?1:a.id-b.id));}
-function gymLists(keep){
-  $("gGroups").innerHTML=GROUPS.filter(g=>g!=="Other"||allEx().some(x=>x.group==="Other")).map(g=>'<button data-g="'+g+'" class="'+(g===gymGroup?"on":"")+'">'+g+'</button>').join("");
-  document.querySelectorAll("#gGroups button").forEach(b=>b.onclick=()=>{gymGroup=b.dataset.g;gymLists();prefill();renderGym();});
-  $("gEx").innerHTML=allEx().filter(x=>x.group===gymGroup).map(x=>'<option>'+esc(x.name)+'</option>').join("");
-  if(keep)$("gEx").value=keep;
+let gDate=todayStr(),pickGroup="All",wuNext={},sideNext={},openProg={},openOpt={},restInt=null,restLeft=0,typeCache=null;
+const IMG="https://cdn.jsdelivr.net/gh/yuhonas/free-exercise-db@main/exercises/";
+const PHOTO={"Flat bench press (kg per side)":"Barbell_Bench_Press_-_Medium_Grip","Smith machine chest press":"Smith_Machine_Bench_Press","Dumbbell chest press":"Dumbbell_Bench_Press","Incline dumbbell press":"Incline_Dumbbell_Press","Incline Smith press":"Smith_Machine_Incline_Bench_Press","Machine chest press":"Machine_Bench_Press","Chest fly machine":"Butterfly","Cable fly":"Cable_Crossover","Push-up":"Pushups","Lat pulldown":"Wide-Grip_Lat_Pulldown","Seated row":"Seated_Cable_Rows","Chest-supported row":"Dumbbell_Incline_Row","Single-arm dumbbell row":"One-Arm_Dumbbell_Row","Assisted pull-up":"Band_Assisted_Pull-Up","Straight-arm pulldown":"Straight-Arm_Pulldown","Back extension":"Hyperextensions_Back_Extensions","Dumbbell shoulder press":"Dumbbell_Shoulder_Press","Machine shoulder press":"Machine_Shoulder_Military_Press","Lateral raise":"Side_Lateral_Raise","Rear delt fly":"Reverse_Machine_Flyes","Face pull":"Face_Pull","Dumbbell biceps curl":"Dumbbell_Bicep_Curl","Cable curl":"Standing_Biceps_Cable_Curl","Hammer curl":"Hammer_Curls","Triceps pushdown":"Triceps_Pushdown","Overhead triceps extension":"Cable_Rope_Overhead_Triceps_Extension","Leg press":"Leg_Press","Bulgarian split squat":"Split_Squat_with_Dumbbells","Dumbbell reverse lunge":"Dumbbell_Rear_Lunge","Goblet squat":"Goblet_Squat","Smith machine squat":"Smith_Machine_Squat","Leg extension":"Leg_Extensions","Glute machine":"Glute_Kickback","Hip thrust":"Barbell_Hip_Thrust","Hip abduction machine":"Thigh_Abductor","Romanian deadlift":"Romanian_Deadlift","Seated leg curl":"Seated_Leg_Curl","Lying leg curl":"Lying_Leg_Curls","Seated calf raise":"Seated_Calf_Raise","Standing calf raise":"Standing_Calf_Raises","Plank (seconds as reps)":"Plank","Cable crunch":"Cable_Crunch","Dead bug":"Dead_Bug","Pallof press":"Pallof_Press","Hanging knee raise":"Hanging_Leg_Raise"};
+const DPHOTO={catcow:"Cat_Stretch",child:"Childs_Pose",hipflex:"Kneeling_Hip_Flexor",fig4:"Ankle_On_The_Knee",slider:"90_90_Hamstring",hamlie:"Hamstring_Stretch",bridge:"Butt_Lift_Bridge",hipstand:"Standing_Hip_Flexors",wgs:"Worlds_Greatest_Stretch",deadbug:"Dead_Bug",sideplank:"Side_Bridge",kneeschest:"Hug_Knees_To_Chest"};
+const FUZZY=[[/pendulum|hack/i,"Hack_Squat","similar movement"],[/hip thrust/i,"Barbell_Hip_Thrust","similar movement"],[/single.?leg.*ext|one.?leg.*ext/i,"Single-Leg_Leg_Extension",""],[/leg ext/i,"Leg_Extensions",""],[/leg curl/i,"Seated_Leg_Curl",""],[/leg press/i,"Leg_Press",""],[/pulldown/i,"Wide-Grip_Lat_Pulldown",""],[/chest press|bench/i,"Machine_Bench_Press",""],[/shoulder press/i,"Machine_Shoulder_Military_Press",""],[/calf/i,"Standing_Calf_Raises",""],[/row/i,"Seated_Cable_Rows","similar movement"]];
+function photoFor(n){if(PHOTO[n])return [PHOTO[n],""];const k=Object.keys(PHOTO).find(x=>x.toLowerCase()===n.toLowerCase());if(k)return [PHOTO[k],""];const f=FUZZY.find(x=>x[0].test(n));return f?[f[1],f[2]]:null;}
+function media(id,fb,note){if(!id)return fb||"";const er="this.parentNode.classList.add('bad')";
+  return '<div class="ph'+(fb?"":" nofb")+'"><img src="'+IMG+id+'/0.jpg" loading="lazy" alt="" onerror="'+er+'"><img class="f2" src="'+IMG+id+'/1.jpg" loading="lazy" alt="" onerror="'+er+'">'+(note?'<span class="cr">'+note+'</span>':'')+(fb?'<div class="fb">'+fb+'</div>':'')+'</div>';}
+function drillMedia(k){return media(DPHOTO[k],fig(k));}
+
+function kg(w){return String(Math.round(w*100)/100);}
+function tsOf(l){if(l.ts)return l.ts;const n=Number(String(l.id).split("-")[0]);return n>1e15?Math.floor(n/1000):null;}
+function cfg(n){const c=(state.exCfg||{})[n]||{};return {load:c.load||(/per side/i.test(n)?"side":(/dumbbell|hammer curl|lateral raise/i.test(n)?"each":"total")),uni:c.uni!=null?c.uni:/single|one[- ]arm|one[- ]leg|unilateral/i.test(n)};}
+function setCfg(n,k,v){state.exCfg=state.exCfg||{};(state.exCfg[n]=state.exCfg[n]||{})[k]=v;}
+function fixSides(n){if(!cfg(n).uni)return;const by={};state.lifts.forEach(l=>{if(l.ex===n)(by[l.date]=by[l.date]||[]).push(l);});
+  Object.values(by).forEach(a=>{let i=0;a.forEach(l=>{if(!l.side){l.side=i%2?"R":"L";i++;}});});}
+/* Set-type detection. Runs on the sets of one exercise in one session (one side), in the order logged.
+   warm-up: comes before the first heavy set and its estimated max is under 80% of the session's best
+   drop set: weight at least 10% lower than the set before, started within 75 seconds of it
+   everything else is a working set. A manual tag (l.t) always wins. */
+function classify(sets){
+  const sc=sets.map(score),best=Math.max(...sc),top=sc.findIndex(v=>v>=best*.9),out=[];
+  sets.forEach((s,i)=>{
+    if(s.t){out.push(s.t);return;}
+    if(i<top&&sc[i]<best*.8){out.push("w");return;}
+    if(i>0){const p=sets[i-1],a=tsOf(s),b=tsOf(p),gap=(a&&b)?(a-b)/1000:null;
+      if(s.w>0&&p.w>0&&s.w<=p.w*.9&&gap!=null&&gap>0&&gap<=75&&out[i-1]!=="w"){out.push("d");return;}}
+    out.push("n");});
+  return out;
 }
-function prefill(){
-  const n=$("gEx").value,ex=exInfo(n),L=liftsFor(n),last=L[L.length-1];
-  $("gW").value=last?last.w:(ex.w!=null?ex.w:"");$("gR").value=last?last.r:(ex.r!=null?ex.r:"");$("gS").value=last?last.s:(ex.s!=null?ex.s:3);
-  $("gMusc").innerHTML=ex.prim?"<b>Works:</b> "+esc(ex.prim)+(ex.sec?" · <b>Also:</b> "+esc(ex.sec):""):"";
-  if(last){const best=L.reduce((m,l)=>score(l)>score(m)?l:m,L[0]);
-    $("gHint").innerHTML="Last time ("+nice(last.date)+"): <b>"+fmt(last.w,1)+" kg x "+last.r+" x "+last.s+"</b>. Best: <b>"+fmt(best.w,1)+" kg x "+best.r+"</b>. Beat it with one more rep or the next weight up.";}
-  else $("gHint").innerHTML="Not logged yet. Enter what you lift today and it becomes your baseline.";
-}
-$("gDate").value=todayStr();
-$("gDate").onchange=()=>{if(!$("gDate").value)$("gDate").value=todayStr();renderGym();};
-$("gEx").onchange=()=>{prefill();renderGym();};
-$("gNew").onclick=()=>{const n=(prompt("Exercise name (it will be added to "+gymGroup+"):")||"").trim();if(!n)return;
-  if(!allEx().some(x=>x.name.toLowerCase()===n.toLowerCase()))state.customEx.push({name:n,group:gymGroup});
-  const real=allEx().find(x=>x.name.toLowerCase()===n.toLowerCase());gymGroup=real.group;save();gymLists(real.name);prefill();renderGym();};
-$("gAdd").onclick=()=>{const w=numIn("gW"),r=numIn("gR"),s=numIn("gS")||1,n=$("gEx").value;
-  if(w==null||r==null||r<=0){alert("Enter weight and reps. Use 0 kg for bodyweight.");return;}
-  const prev=liftsFor(n),pb=prev.length?Math.max(...prev.map(score)):null,l={id:uid(),date:$("gDate").value||todayStr(),ex:n,w,r:Math.round(r),s:Math.round(s)};
-  l.pb=pb!=null&&score(l)>pb+.01;state.lifts.push(l);save();prefill();renderGym();flash($("gAdd"),l.pb?"New personal best!":"Added");};
-let restInt=null;
-document.querySelectorAll(".timer button").forEach(b=>b.onclick=()=>{let left=+b.dataset.t;clearInterval(restInt);const show=()=>{$("gTimer").textContent=Math.floor(left/60)+":"+String(left%60).padStart(2,"0");};show();
-  restInt=setInterval(()=>{left--;show();if(left<=0){clearInterval(restInt);$("gTimer").textContent="Go";beep();}},1000);});
-function liftRow(l,del){return '<div class="li"><div class="n">'+esc(l.ex)+(l.pb?'<span class="pb">PB</span>':'')+'<small>'+l.s+' set'+(l.s===1?'':'s')+' x '+l.r+' reps · '+esc(exInfo(l.ex).group)+'</small></div><div class="w">'+fmt(l.w,1)+' kg</div>'+(del?'<button class="del" data-l="'+l.id+'">✕</button>':'')+'</div>';}
+function types(){if(typeCache)return typeCache;const g={},m={};
+  state.lifts.forEach(l=>{const k=l.date+"|"+l.ex+"|"+(l.side||"");(g[k]=g[k]||[]).push(l);});
+  Object.values(g).forEach(a=>{const t=classify(a);a.forEach((l,i)=>{m[l.id]=t[i];});});return typeCache=m;}
+function typ(l){return types()[l.id]||"n";}
+function isWork(l){return typ(l)!=="w";}
+function isTop(l){const t=typ(l);return t==="n"||t==="f";}
+function setCount(L){const by={};L.filter(isWork).forEach(l=>{const o=by[l.ex]=by[l.ex]||{L:0,R:0,N:0};o[l.side||"N"]++;});return Object.values(by).reduce((a,o)=>a+o.N+Math.max(o.L,o.R),0);}
+function groupSets(from,to){const by={};state.lifts.filter(l=>l.date>=from&&l.date<=to).forEach(l=>{const g=exInfo(l.ex).group;(by[g]=by[g]||[]).push(l);});const o={};Object.keys(by).forEach(g=>{o[g]=setCount(by[g]);});return o;}
+function dayLifts(d){return state.lifts.filter(l=>l.date===d);}
+function exLifts(n){return state.lifts.filter(l=>l.ex===n&&isTop(l));}
+function prevSession(n,d){const ds=[...new Set(state.lifts.filter(l=>l.ex===n&&l.date<d).map(l=>l.date))].sort(),pd=ds[ds.length-1];return pd?{date:pd,sets:state.lifts.filter(l=>l.ex===n&&l.date===pd&&isWork(l))}:null;}
+function cardNames(d){const a=[];dayLifts(d).forEach(l=>{if(!a.includes(l.ex))a.push(l.ex);});((state.draft||{})[d]||[]).forEach(n=>{if(!a.includes(n))a.push(n);});return a;}
+function addToDraft(d,n){state.draft=state.draft||{};const a=state.draft[d]=state.draft[d]||[];if(!a.includes(n))a.push(n);}
+function setsText(S,uni){const f=a=>a.map(s=>kg(s.w)+" × "+s.r).join(", ");if(!uni)return f(S);const L=S.filter(s=>s.side==="L"),R=S.filter(s=>s.side==="R");return "Left "+(f(L)||"-")+" · Right "+(f(R)||"-");}
+function paintRest(){$("gTimer").textContent=Math.floor(restLeft/60)+":"+String(restLeft%60).padStart(2,"0");}
+function stopRest(){clearInterval(restInt);$("gRest").style.display="none";}
+function startRest(){clearInterval(restInt);restLeft=state.rest;$("gRest").style.display="flex";paintRest();restInt=setInterval(()=>{restLeft--;paintRest();if(restLeft<=0){stopRest();beep();}},1000);}
+$("gRestSkip").onclick=stopRest;
+$("gRestAdd").onclick=()=>{restLeft+=15;paintRest();};
+$("gRestSel").value=String(state.rest);
+$("gRestSel").onchange=e=>{state.rest=+e.target.value;save();if(!state.rest)stopRest();};
+$("gDate").value=gDate;
+$("gDate").onchange=()=>{gDate=$("gDate").value||todayStr();$("gDate").value=gDate;renderGym();};
+const TLAB={w:"W",d:"D",f:"F"},TNAME={w:"warm-up",d:"drop set",f:"to failure",n:"working set"},LOADLAB={total:"kg",side:"kg / side",each:"kg / hand"};
+
 function renderGym(){
-  const date=$("gDate").value||todayStr(),n=$("gEx").value,t=todayStr();
-  $("gSessTitle").textContent=date===t?"Today's session":"Session · "+nice(date);
-  const sess=state.lifts.filter(l=>l.date===date);
-  $("gSession").innerHTML=sess.length?sess.map(l=>liftRow(l,true)).join(""):'<div class="empty">Nothing logged for this date yet.</div>';
-  $("gSession").querySelectorAll(".del").forEach(b=>b.onclick=()=>{state.lifts=state.lifts.filter(l=>String(l.id)!==b.dataset.l);save();prefill();renderGym();});
-  const sets={};state.lifts.filter(l=>l.date>=shiftDay(t,-6)&&l.date<=t).forEach(l=>{const g=exInfo(l.ex).group;sets[g]=(sets[g]||0)+l.s;});
+  const d=gDate,t=todayStr(),names=cardNames(d),dl=dayLifts(d);
+  $("gSum").innerHTML=names.length?(d===t?"Today":nice(d))+": <b>"+names.length+"</b> exercise"+(names.length>1?"s":"")+" · <b>"+setCount(dl)+"</b> working sets"+(dl.some(l=>typ(l)==="w")?" · "+dl.filter(l=>typ(l)==="w").length+" warm-up":""):"";
+  $("gCards").innerHTML=names.length?names.map((n,ci)=>{
+    const ex=exInfo(n),c=cfg(n),mine=dl.filter(l=>l.ex===n),ps=prevSession(n,d),wu=!!wuNext[n];
+    const lastMine=mine[mine.length-1],side=c.uni?(sideNext[n]||(lastMine&&lastMine.side==="L"?"R":"L")):"";
+    const psFor=sd=>ps?ps.sets.filter(s=>!c.uni||s.side===sd):[];
+    const pv=(i,sd)=>{const a=psFor(sd);if(!a.length)return "-";const s=a[Math.min(i,a.length-1)];return kg(s.w)+" × "+s.r;};
+    const cnt={L:0,R:0,"":0};
+    const rows=mine.map(l=>{const ty=typ(l),sd=c.uni?(l.side||"L"):"",i=ty==="w"?-1:cnt[sd]++;
+      const lab=(c.uni?sd:"")+(TLAB[ty]||(i+1));
+      return '<div class="sr done"><button class="sn '+ty+(l.t?"":" auto")+'" data-ty="'+l.id+'">'+lab+'</button><span class="pv">'+(ty==="w"?"warm-up":(ty==="d"?"drop set":pv(i,sd)))+(l.pb&&isTop(l)?'<span class="pb">PB</span>':'')+'</span><span class="val">'+kg(l.w)+'</span><span class="val">'+l.r+'</span><button class="del" data-l="'+l.id+'">✕</button></div>';}).join("");
+    const same=[...mine].reverse().find(l=>!c.uni||l.side===side),pa=psFor(side);
+    const base=same||lastMine||(pa.length?pa[Math.min(cnt[side],pa.length-1)]:{w:ex.w,r:ex.r});
+    const next='<div class="sr"><button class="sn tog'+(wu?" w":"")+'" data-ci="'+ci+'">'+(c.uni?side:"")+(wu?"W":(cnt[side]+1))+'</button><span class="pv">'+(wu?"warm-up":pv(cnt[side],side))+'</span><input type="number" inputmode="decimal" step="0.5" id="w_'+ci+'" value="'+(base&&base.w!=null?kg(base.w):"")+'" placeholder="kg"><input type="number" inputmode="numeric" id="r_'+ci+'" value="'+(base&&base.r!=null?base.r:"")+'" placeholder="reps"><button class="ok" data-ci="'+ci+'">✓</button></div>';
+    const ph=photoFor(n);
+    return '<div class="card ex"><div class="exh"><div><div class="exn">'+esc(n)+'</div><div class="exm">'+esc(ex.group)+(ex.prim?" · works "+esc(ex.prim.toLowerCase()):"")+(ex.sec?" · also "+esc(ex.sec.toLowerCase()):"")+'</div></div><button class="del" data-rm="'+ci+'">✕</button></div>'+
+      '<div class="prev">'+(ps&&ps.sets.length?"Last time, "+nice(ps.date)+": <b>"+setsText(ps.sets,c.uni)+"</b>":"First time logging this. Today sets your baseline.")+'</div>'+
+      '<details class="frm"><summary>How to do it</summary>'+(ph?media(ph[0],"",ph[1]):"")+(FORM[n]?'<p>'+FORM[n]+'</p>':'')+'<a href="'+demo(n.replace(/\(.*\)/,"")+" proper form")+'" target="_blank" rel="noopener">Watch form videos ↗</a></details>'+
+      '<details class="frm opt" data-ci="'+ci+'"'+(openOpt[n]?" open":"")+'><summary>Options: weight is '+(c.load==="side"?"per side":(c.load==="each"?"per hand":"the total"))+(c.uni?", one side at a time":"")+'</summary>'+
+        '<label style="margin-top:10px">The weight I type in is</label><div class="seg">'+[["total","Total"],["side","Per side"],["each","Per hand"]].map(o=>'<button data-load="'+o[0]+'" data-ci="'+ci+'" class="'+(c.load===o[0]?"on":"")+'">'+o[1]+'</button>').join("")+'</div>'+
+        '<p>'+(c.load==="side"?"For plate-loaded machines and barbells. Type the plates on <b>one side</b>. The machine or bar itself is not counted.":(c.load==="each"?"For dumbbells. Type the weight of <b>one</b> dumbbell.":"For weight-stack machines and cables. Type the number on the stack."))+'</p>'+
+        '<label style="margin-top:10px">Left and right logged separately</label><div class="seg"><button data-uni="0" data-ci="'+ci+'" class="'+(c.uni?"":"on")+'">Off</button><button data-uni="1" data-ci="'+ci+'" class="'+(c.uni?"on":"")+'">On</button></div></details>'+
+      (c.uni?'<div class="seg side"><button data-side="L" data-ci="'+ci+'" class="'+(side==="L"?"on":"")+'">Next set: Left</button><button data-side="R" data-ci="'+ci+'" class="'+(side==="R"?"on":"")+'">Next set: Right</button></div>':'')+
+      '<div class="sr head"><span>Set</span><span>Previous</span><span>'+LOADLAB[c.load]+'</span><span>Reps</span><span></span></div>'+rows+next+
+      (ci===0?'<div class="tip" style="margin-top:8px">Tap ✓ to log each set. <b>W</b> warm-up, <b>D</b> drop set and <b>F</b> failure are detected automatically (dashed outline). Tap any set label to change it.</div>':'')+'</div>';
+  }).join(""):'<div class="card"><div class="empty">No exercises for this date yet.<br>Tap <b>Add exercise</b>, or repeat a past session below.</div></div>';
+  const G=$("gCards");
+  G.querySelectorAll(".ok").forEach(b=>b.onclick=()=>{
+    const ci=+b.dataset.ci,n=names[ci],c=cfg(n),w=numIn("w_"+ci),r=numIn("r_"+ci);
+    if(w==null||r==null||r<=0){alert("Enter weight and reps. Use 0 kg for bodyweight.");return;}
+    const mine=dl.filter(l=>l.ex===n),lastMine=mine[mine.length-1],side=c.uni?(sideNext[n]||(lastMine&&lastMine.side==="L"?"R":"L")):"";
+    const prev=exLifts(n),best=prev.length?Math.max(...prev.map(score)):null,l={id:uid(),ts:Date.now(),date:d,ex:n,w,r:Math.round(r),s:1};
+    if(side)l.side=side;if(wuNext[n])l.t="w";
+    state.lifts.push(l);typeCache=null;l.pb=isTop(l)&&best!=null&&score(l)>best+.01;
+    wuNext[n]=false;if(side)sideNext[n]=side==="L"?"R":"L";addToDraft(d,n);save();renderGym();if(state.rest)startRest();});
+  G.querySelectorAll(".tog").forEach(b=>b.onclick=()=>{const n=names[+b.dataset.ci];wuNext[n]=!wuNext[n];renderGym();});
+  G.querySelectorAll("[data-ty]").forEach(b=>b.onclick=()=>{const l=state.lifts.find(x=>String(x.id)===b.dataset.ty);if(!l)return;
+    const order=[undefined,"w","n","d","f"],i=order.indexOf(l.t);const nx=order[(i+1)%order.length];if(nx)l.t=nx;else delete l.t;save();renderGym();});
+  G.querySelectorAll("[data-l]").forEach(b=>b.onclick=()=>{state.lifts=state.lifts.filter(l=>String(l.id)!==b.dataset.l);save();renderGym();});
+  G.querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{const n=names[+b.dataset.rm],has=dl.some(l=>l.ex===n);
+    if(has&&!confirm("Remove "+n+" and its sets from this session?"))return;
+    state.lifts=state.lifts.filter(l=>!(l.date===d&&l.ex===n));if(state.draft&&state.draft[d])state.draft[d]=state.draft[d].filter(x=>x!==n);save();renderGym();});
+  G.querySelectorAll("[data-load]").forEach(b=>b.onclick=()=>{const n=names[+b.dataset.ci];setCfg(n,"load",b.dataset.load);openOpt[n]=true;save();renderGym();});
+  G.querySelectorAll("[data-uni]").forEach(b=>b.onclick=()=>{const n=names[+b.dataset.ci];setCfg(n,"uni",b.dataset.uni==="1");openOpt[n]=true;
+    if(b.dataset.uni==="1")fixSides(n);else state.lifts.forEach(l=>{if(l.ex===n)delete l.side;});save();renderGym();});
+  G.querySelectorAll("[data-side]").forEach(b=>b.onclick=()=>{sideNext[names[+b.dataset.ci]]=b.dataset.side;renderGym();});
+  G.querySelectorAll("details.opt").forEach(el=>el.ontoggle=()=>{openOpt[names[+el.dataset.ci]]=el.open;});
+
+  const dates=[...new Set(state.lifts.map(l=>l.date))].filter(x=>x!==d).sort().reverse().slice(0,5);
+  $("gCopy").innerHTML=dates.length?dates.map(x=>{const L=dayLifts(x),ns=[...new Set(L.map(l=>l.ex))];return '<div class="rt"><div class="n">'+nice(x)+'<small>'+ns.map(esc).join(", ")+' · '+setCount(L)+' working sets</small></div><button data-d="'+x+'">Use</button></div>';}).join("")
+    :'<div class="empty">Your past sessions will appear here so you can load the same exercises in one tap.</div>';
+  $("gCopy").querySelectorAll("button").forEach(b=>b.onclick=()=>{[...new Set(dayLifts(b.dataset.d).map(l=>l.ex))].forEach(n=>addToDraft(d,n));save();renderGym();window.scrollTo(0,0);});
+
+  const sets=groupSets(shiftDay(t,-6),t);
   $("gSets").innerHTML=GROUPS.filter(g=>g!=="Other"||sets[g]).map(g=>'<div class="prog"><div class="ph"><b>'+g+'</b><span>'+(sets[g]||0)+' sets</span></div><div class="bar"><i style="width:'+Math.min(100,(sets[g]||0)*10)+'%"></i></div></div>').join("");
-  const L=liftsFor(n);$("gProgName").textContent=n||"";
-  if(L.length){const f=L[0],b=L.reduce((m,l)=>score(l)>score(m)?l:m,L[0]);$("gFirst").innerHTML=fmt(f.w,1)+"<small>kg x "+f.r+"</small>";$("gBest").innerHTML=fmt(b.w,1)+"<small>kg x "+b.r+"</small>";}
-  else{$("gFirst").textContent="-";$("gBest").textContent="-";}
-  const by={};L.forEach(l=>{by[l.date]=Math.max(by[l.date]||0,score(l));});const ds=Object.keys(by).sort();
-  lineChart($("gChart"),ds.map(d=>({x:dayIndex(d,ds[0]),y:by[d]})),{dec:1,x0:ds.length?nice(ds[0],true):"",x1:ds.length?nice(ds[ds.length-1],true):"",caption:"Estimated 1-rep max per session (kg). Up and to the right means stronger.",empty:"Log this exercise on 2 different days to see your progress line."});
-  const dates=[...new Set(state.lifts.map(l=>l.date))].sort().reverse().slice(0,6);
-  $("gRecent").innerHTML=dates.length?dates.map(d=>'<div class="sess"><h3>'+nice(d)+'</h3>'+state.lifts.filter(l=>l.date===d).map(l=>liftRow(l,false)).join("")+'</div>').join(""):'<div class="empty">No sessions yet.</div>';
+
+  const items=[...new Set(state.lifts.filter(isTop).map(l=>l.ex))].map(n=>{const L=exLifts(n),by={};L.forEach(l=>{by[l.date]=Math.max(by[l.date]||0,score(l));});
+    const ds=Object.keys(by).sort(),ld=ds[ds.length-1],lastSets=L.filter(l=>l.date===ld),best=L.reduce((m,l)=>score(l)>score(m)?l:m,L[0]);
+    return {n,by,ds,ld,lastSets,best,pct:ds.length>=2&&by[ds[0]]>0?(by[ld]-by[ds[0]])/by[ds[0]]*100:null};}).sort((a,b)=>a.ld<b.ld?1:-1);
+  $("gProg").innerHTML=items.length?items.map((it,i)=>'<details class="lrn pg" data-i="'+i+'"'+(openProg[it.n]?" open":"")+'><summary><span class="exn">'+esc(it.n)+'<small>Latest, '+nice(it.ld)+': '+setsText(it.lastSets,cfg(it.n).uni)+'<br>Best: '+kg(it.best.w)+' '+LOADLAB[cfg(it.n).load]+' × '+it.best.r+'</small></span>'+(it.pct!=null?'<span class="chg '+(it.pct>=0?"up":"down")+'">'+(it.pct>=0?"+":"")+fmt(it.pct,0)+'%</span>':'')+'</summary><div id="pg_'+i+'" style="margin-top:12px"></div></details>').join("")
+    :'<div class="empty">Each exercise you log shows up here with its latest sets, your best, and a progress chart.</div>';
+  items.forEach((it,i)=>{lineChart($("pg_"+i),it.ds.map(x=>({x:dayIndex(x,it.ds[0]),y:it.by[x]})),{dec:1,x0:nice(it.ds[0],true),x1:nice(it.ld,true),caption:"Estimated 1-rep max per session, working sets only. Up and to the right means stronger.",empty:"Log this on one more day to see a progress line."});});
+  $("gProg").querySelectorAll("details").forEach(el=>el.ontoggle=()=>{openProg[items[+el.dataset.i].n]=el.open;});
 }
+
+/* exercise picker */
+function paintPicker(){
+  const q=$("pSearch").value.trim().toLowerCase(),have=cardNames(gDate),gs=["All"].concat(GROUPS.filter(g=>allEx().some(x=>x.group===g)));
+  $("pChips").innerHTML=gs.map(g=>'<button data-g="'+g+'" class="'+(g===pickGroup?"on":"")+'">'+g+'</button>').join("");
+  $("pChips").querySelectorAll("button").forEach(b=>b.onclick=()=>{pickGroup=b.dataset.g;paintPicker();});
+  const list=allEx().filter(x=>(pickGroup==="All"||x.group===pickGroup)&&(!q||(x.name+" "+x.group+" "+x.prim+" "+x.sec).toLowerCase().includes(q)));
+  let html="",cur="";
+  list.forEach((x,i)=>{if(x.group!==cur){cur=x.group;html+='<div class="pgh">'+cur+'</div>';}
+    html+='<button class="pk" data-i="'+i+'"><span class="exn">'+esc(x.name)+(x.prim?'<small>Works '+esc(x.prim.toLowerCase())+(x.sec?" · also "+esc(x.sec.toLowerCase()):"")+'</small>':'')+'</span><span class="pa">'+(have.includes(x.name)?"Added":"+")+'</span></button>';});
+  $("pList").innerHTML=html||'<div class="empty">No match. Add it as your own exercise below.</div>';
+  $("pList").querySelectorAll(".pk").forEach(b=>b.onclick=()=>{addToDraft(gDate,list[+b.dataset.i].name);save();closePicker();});
+}
+function closePicker(){$("gSheet").style.display="none";renderGym();}
+$("gAddEx").onclick=()=>{$("pSearch").value="";pickGroup="All";$("pGroup").innerHTML=GROUPS.map(g=>'<option>'+g+'</option>').join("");$("gSheet").style.display="block";$("gSheet").scrollTop=0;paintPicker();};
+$("pClose").onclick=closePicker;
+$("pSearch").oninput=paintPicker;
+$("pAdd").onclick=()=>{const n=$("pName").value.trim();if(!n){alert("Type a name for the exercise.");return;}
+  let real=allEx().find(x=>x.name.toLowerCase()===n.toLowerCase());if(!real){real={name:n,group:$("pGroup").value};state.customEx.push(real);}
+  setCfg(real.name,"load",$("pLoad").value);setCfg(real.name,"uni",$("pUni").value==="1");
+  addToDraft(gDate,real.name);$("pName").value="";save();closePicker();};
 
 /* ---------------- MOBILITY ---------------- */
 let pl=null,actx=null;
 function beep(){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();const o=actx.createOscillator(),g=actx.createGain();o.frequency.value=880;g.gain.value=.08;o.connect(g);g.connect(actx.destination);o.start();o.stop(actx.currentTime+.18);}catch(e){}}
-function startRoutine(id){
-  const r=MOB[id],seq=[];r.steps.forEach(s=>{if(s[3]===2){seq.push({n:s[0],cue:s[1],secs:s[2],side:"Left side",a:s[4]});seq.push({n:s[0],cue:s[1],secs:s[2],side:"Right side",a:s[4]});}else seq.push({n:s[0],cue:s[1],secs:s[2],side:"",a:s[4]});});
-  stopPlayer();pl={id,seq,i:0,left:seq[0].secs,paused:false,done:{hips:0,hams:0,back:0},total:seq.reduce((a,s)=>a+s.secs,0),elapsed:0};
-  $("mPlayerCard").style.display="block";$("mPlTitle").textContent=r.name;$("mPause").textContent="Pause";beep();paintPlayer();
-  pl.int=setInterval(()=>{if(!pl||pl.paused)return;pl.left--;pl.elapsed++;pl.done[pl.seq[pl.i].a]++;if(pl.left<=0)nextStep();else paintPlayer();},1000);
-  window.scrollTo(0,0);
-}
-function nextStep(){if(!pl)return;beep();pl.i++;if(pl.i>=pl.seq.length){finishRoutine();return;}pl.left=pl.seq[pl.i].secs;paintPlayer();}
-function paintPlayer(){const s=pl.seq[pl.i],nx=pl.seq[pl.i+1];$("mPlName").textContent=s.n;$("mPlSide").textContent=s.side;$("mPlCnt").textContent=pl.left;$("mPlCue").textContent=s.cue;
-  $("mPlNext").textContent=nx?"Next: "+nx.n+(nx.side?" ("+nx.side.toLowerCase()+")":""):"Last one";$("mPlBar").style.width=(pl.elapsed/pl.total*100).toFixed(0)+"%";}
-function stopPlayer(){if(pl){clearInterval(pl.int);pl=null;}$("mPlayerCard").style.display="none";}
-function finishRoutine(){const p=pl;stopPlayer();if(p.elapsed<60){return;}state.mob.push({id:uid(),date:todayStr(),routine:p.id,mins:Math.round(p.elapsed/60),a:p.done});save();renderMob();renderHome();alert(MOB[p.id].name+" done. Logged "+Math.round(p.elapsed/60)+" minutes.");}
+function say(t){if(!state.voice)return;try{const u=new SpeechSynthesisUtterance(t);speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
+function buildSeq(id){const seq=[],P=state.prep;MOB[id].steps.forEach(s=>{const o={k:s[5],n:s[0],cue:s[1],secs:s[2],a:s[4]};
+  if(s[3]===2){seq.push(Object.assign({side:"Left side",prep:P},o));seq.push(Object.assign({side:"Right side",prep:P},o));}else seq.push(Object.assign({side:"",prep:P},o));});return seq;}
+function enterStep(i){pl.i=i;const s=pl.seq[i];pl.phase=s.prep>0?"prep":"go";pl.left=s.prep>0?s.prep:s.secs;
+  say(s.side==="Right side"?"Switch to the right side":"Next, "+s.n+(s.side?", left side":""));if(pl.phase==="go")beep();paintPlayer();}
+function beginGo(){pl.phase="go";pl.left=pl.seq[pl.i].secs;beep();paintPlayer();}
+function tick(){if(!pl||pl.paused)return;pl.left--;
+  if(pl.phase==="go"){pl.elapsed++;pl.done[pl.seq[pl.i].a]++;}
+  if(pl.left<=0){if(pl.phase==="prep"){beginGo();return;}nextStep();return;}paintPlayer();}
+function startRoutine(id){stopPlayer();closeMSheet();const seq=buildSeq(id);
+  pl={id,seq,i:0,paused:false,done:{hips:0,hams:0,back:0},total:seq.reduce((a,s)=>a+s.secs,0),elapsed:0,shown:-1};
+  $("mPlayerCard").style.display="block";$("mPlTitle").textContent=MOB[id].name;$("mPause").textContent="Pause";
+  enterStep(0);pl.int=setInterval(tick,1000);window.scrollTo(0,0);}
+function nextStep(){if(!pl)return;if(pl.i+1>=pl.seq.length){beep();finishRoutine();return;}enterStep(pl.i+1);}
+function paintPlayer(){const s=pl.seq[pl.i],nx=pl.seq[pl.i+1],prep=pl.phase==="prep";
+  if(pl.shown!==pl.i){pl.shown=pl.i;$("mPlFig").innerHTML=drillMedia(s.k);$("mPlSteps").innerHTML='<ol>'+DRILLS[s.k][3].map(x=>'<li>'+x+'</li>').join("")+'</ol>';}
+  $("mPlPhase").textContent=prep?"Get into position":"Go";$("mPlPhase").className="phs"+(prep?" prep":"");
+  $("mPlCnt").className="cnt"+(prep?" prep":"");$("mPlName").textContent=s.n;$("mPlSide").textContent=s.side;$("mPlCnt").textContent=pl.left;$("mPlCue").textContent=s.cue;
+  $("mPlNext").textContent=(pl.i+1)+" of "+pl.seq.length+" · "+(nx?"Next: "+nx.n+(nx.side?" ("+nx.side.toLowerCase()+")":""):"Last one");$("mPlBar").style.width=(pl.elapsed/pl.total*100).toFixed(0)+"%";}
+function stopPlayer(){if(pl){clearInterval(pl.int);pl=null;}try{speechSynthesis.cancel();}catch(e){}$("mPlayerCard").style.display="none";}
+function finishRoutine(){const p=pl;stopPlayer();if(p.elapsed<60){return;}state.mob.push({id:uid(),date:todayStr(),routine:p.id,mins:Math.round(p.elapsed/60),a:p.done});save();renderMob();renderHome();alert(MOB[p.id].name+": logged "+Math.round(p.elapsed/60)+" minutes.");}
 $("mPause").onclick=()=>{if(!pl)return;pl.paused=!pl.paused;$("mPause").textContent=pl.paused?"Resume":"Pause";};
 $("mSkip").onclick=()=>{if(pl)nextStep();};
-$("mStop").onclick=()=>{if(!pl)return;if(pl.elapsed>=120&&confirm("Log the "+Math.round(pl.elapsed/60)+" minutes you did?")){finishRoutine();}else stopPlayer();};
-document.querySelectorAll(".seg").forEach(sg=>{sg.innerHTML=[1,2,3,4,5].map(v=>'<button data-v="'+v+'">'+v+'</button>').join("");
+$("mPlCnt").onclick=()=>{if(pl&&pl.phase==="prep")beginGo();};
+$("mStop").onclick=()=>{if(!pl)return;if(pl.elapsed>=60&&confirm("Log the "+Math.round(pl.elapsed/60)+" minutes you did?")){finishRoutine();}else stopPlayer();};
+function closeMSheet(){$("mSheet").style.display="none";}
+function previewRoutine(id){const r=MOB[id];
+  $("mSheetBody").innerHTML='<div class="sh"><h3>'+r.name+'</h3><button class="btn2" id="mShClose">Close</button></div>'+
+    '<div class="note"><b>'+r.steps.length+' drills.</b> Read through how each one is done, then begin. '+r.desc+' About '+r.mins+' minutes. '+(r.tag==="studied"?'<b>This is a studied protocol.</b>':'Each drill is backed by stretching research, but this exact combination has not been tested as a routine.')+'</div>'+
+    '<button class="save" data-go="'+id+'">Begin routine</button>'+
+    r.steps.map((s,i)=>{const d=DRILLS[s[5]];return '<div class="card"><h2>'+(i+1)+' of '+r.steps.length+' <em>'+s[2]+' seconds'+(s[3]===2?" each side":"")+'</em></h2><div class="exn" style="margin-bottom:12px">'+d[0]+'</div>'+drillMedia(s[5])+'<div class="dl"><ol>'+d[3].map(x=>'<li>'+x+'</li>').join("")+'</ol></div><p class="pp"><b>You should feel:</b> '+d[4]+'</p><p class="pp"><b>Avoid:</b> '+d[5]+'</p></div>';}).join("")+
+    '<button class="save" data-go="'+id+'">Begin routine</button>';
+  $("mSheet").style.display="block";$("mSheet").scrollTop=0;$("mShClose").onclick=closeMSheet;
+  $("mSheetBody").querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>startRoutine(b.dataset.go));}
+$("mPrep").value=String(state.prep);$("mPrep").onchange=e=>{state.prep=+e.target.value;state.prepSet=true;save();};
+$("mVoice").value=state.voice?"1":"0";$("mVoice").onchange=e=>{state.voice=e.target.value==="1";save();};
+document.querySelectorAll(".seg[data-k]").forEach(sg=>{sg.innerHTML=[1,2,3,4,5].map(v=>'<button data-v="'+v+'">'+v+'</button>').join("");
   sg.querySelectorAll("button").forEach(b=>b.onclick=()=>{segSel[sg.dataset.k]=+b.dataset.v;sg.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));});});
 $("cSave").onclick=()=>{const toe=numIn("cToe");if(toe==null&&Object.values(segSel).every(v=>v==null)){alert("Enter at least one value.");return;}
   const t=todayStr();state.checks=state.checks.filter(c=>c.date!==t);state.checks.push({date:t,toe,hips:segSel.hips,hams:segSel.hams,back:segSel.back});state.checks.sort((a,b)=>a.date<b.date?-1:1);save();renderMob();flash($("cSave"),"Saved");};
@@ -562,8 +945,9 @@ function renderMob(){
   wk.forEach(m=>{Object.keys(sec).forEach(k=>{sec[k]+=(m.a&&m.a[k])||0;});});
   $("mWeek").innerHTML=Object.keys(AREA).map(k=>'<div class="prog"><div class="ph"><b>'+AREA[k]+'</b><span>'+fmt(sec[k]/60,1)+' / 5 min</span></div><div class="bar"><i class="c" style="width:'+Math.min(100,sec[k]/300*100).toFixed(0)+'%"></i></div></div>').join("")+
     '<div class="tip"><b>'+new Set(wk.map(m=>m.date)).size+'</b> of your '+state.mobTarget+' sessions done in the last 7 days.</div>';
-  $("mList").innerHTML=Object.keys(MOB).map(id=>'<div class="rt"><div class="n">'+MOB[id].name+' · '+MOB[id].mins+' min<small>'+MOB[id].desc+'</small></div><button data-r="'+id+'">Start</button></div>').join("");
-  $("mList").querySelectorAll("button").forEach(b=>b.onclick=()=>startRoutine(b.dataset.r));
+  $("mList").innerHTML=Object.keys(MOB).map(id=>'<div class="rt"><div class="n">'+MOB[id].name+' · '+MOB[id].mins+' min<span class="bdg '+(MOB[id].tag==="studied"?"s":"b")+'">'+(MOB[id].tag==="studied"?"Studied protocol":"Built from studied drills")+'</span><small>'+MOB[id].desc+'</small></div><div class="acts"><button data-p="'+id+'">Start</button></div></div>').join("");
+  $("mList").querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>startRoutine(b.dataset.r));
+  $("mList").querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>previewRoutine(b.dataset.p));
   const C=state.checks;
   if(!C.length)$("cHist").innerHTML='<div class="tip">Do this once a month. For the toe-touch, stand with straight legs, reach down and estimate the gap to the floor.</div>';
   else{const f=C[0],l=C[C.length-1],row=(lab,k,u)=>'<div class="li"><div class="n">'+lab+'</div><div class="w">'+(f[k]!=null&&C.length>1?fmt(f[k],u?1:0)+" → ":"")+(l[k]!=null?fmt(l[k],u?1:0)+(u||""):"-")+'</div></div>';
@@ -572,6 +956,10 @@ function renderMob(){
   $("mRecent").innerHTML=R.length?R.map(m=>'<div class="li"><div class="n">'+(MOB[m.routine]?MOB[m.routine].name:"Mobility")+'<small>'+nice(m.date)+'</small></div><div class="w">'+m.mins+' min</div><button class="del" data-m="'+m.id+'">✕</button></div>').join(""):'<div class="empty">No mobility sessions yet. Start with the Daily reset.</div>';
   $("mRecent").querySelectorAll(".del").forEach(b=>b.onclick=()=>{state.mob=state.mob.filter(m=>String(m.id)!==b.dataset.m);save();renderMob();});
 }
+
+$("mLib").innerHTML=Object.keys(AREA).map(ar=>'<div class="pgh">'+AREA[ar]+'</div>'+Object.keys(DRILLS).filter(k=>DRILLS[k][1]===ar).map(k=>{const d=DRILLS[k];
+  return '<details class="lrn dl"><summary>'+fig(k)+'<span class="exn" style="font-size:14.5px">'+d[0]+'</span></summary>'+drillMedia(k)+'<ol>'+d[3].map(x=>'<li>'+x+'</li>').join("")+'</ol><p><b style="color:#fff">You should feel:</b> '+d[4]+'</p><p><b style="color:#fff">Avoid:</b> '+d[5]+'</p><a href="'+demo(d[0]+" stretch how to")+'" target="_blank" rel="noopener">Watch video demos ↗</a></details>';}).join("")).join("");
+$("mEv").innerHTML=EVID.map(e=>'<details class="lrn ev"><summary>'+e[0]+'</summary>'+e[1].map(p=>'<p>'+p+'</p>').join("")+'<div>'+e[2].map(l=>'<a href="'+l[1]+'" target="_blank" rel="noopener">'+l[0]+' ↗</a>').join("")+'</div></details>').join("");
 
 /* ---------------- LEARN ---------------- */
 $("learn").innerHTML=LEARN.map(c=>'<div class="card"><h2>'+c[0]+'</h2>'+c[1].map(s=>'<details class="lrn"><summary>'+s[0]+'</summary><p>'+s[1]+'</p><p class="you"><b>What it means for you:</b> '+s[2]+'</p><a href="'+s[4]+'" target="_blank" rel="noopener">Source: '+s[3]+' ↗</a></details>').join("")+'</div>').join("");
@@ -586,7 +974,7 @@ $("sSave").onclick=()=>{const d=$("sDate").value||todayStr(),sc={date:d,weight:n
 $("qSave").onclick=()=>{const w=numIn("qW");if(w==null||w<30||w>250){alert("Enter your weight in kg.");return;}setEntry(todayStr(),{weight:w});save();$("qW").value="";render();flash($("qSave"),"Saved");};
 $("exportBtn").onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(Object.assign({app:"FitnessHub",version:4,exported:new Date().toISOString()},state),null,1)],{type:"application/json"}));
   const a=document.createElement("a");a.href=url;a.download="fitness-hub-backup-"+todayStr()+".json";document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(()=>URL.revokeObjectURL(url),1500);};
-$("resetBtn").onclick=()=>{if(confirm("Delete ALL your data on this phone? This cannot be undone.")&&confirm("Are you sure? Export a backup first if in doubt.")){state={entries:[]};save();location.reload();}};
+$("resetBtn").onclick=()=>{if(confirm("Delete ALL your data on this phone"+(syncOn()?" and in the cloud":"")+"? This cannot be undone.")&&confirm("Are you sure? Export a backup first if in doubt.")){state={entries:[]};save();location.reload();}};
 $("impBtn").onclick=()=>{$("importFile").value="";$("importFile").click();};
 function mergeData(data){
   const n={days:0,lifts:0,mob:0};
@@ -596,6 +984,9 @@ function mergeData(data){
   const mi=new Set(state.mob.map(l=>String(l.id)));(data.mob||[]).forEach(l=>{if(l&&l.date&&!mi.has(String(l.id))){state.mob.push(l);n.mob++;}});
   (data.checks||[]).forEach(c=>{if(c&&c.date&&!state.checks.some(s=>s.date===c.date))state.checks.push(c);});
   (data.customEx||[]).forEach(c=>{if(c&&c.name&&!allEx().some(x=>x.name.toLowerCase()===c.name.toLowerCase()))state.customEx.push(c);});
+  state.lifts=splitLifts(state.lifts);state.lifts.forEach(l=>{if(l.wu&&!l.t)l.t="w";delete l.wu;});
+  if(data.exCfg)Object.keys(data.exCfg).forEach(k=>{if(!state.exCfg[k])state.exCfg[k]=data.exCfg[k];});
+  [...new Set(state.lifts.map(l=>l.ex))].forEach(fixSides);
   state.scans.sort((a,b)=>a.date<b.date?-1:1);state.checks.sort((a,b)=>a.date<b.date?-1:1);return n;
 }
 $("importFile").onchange=ev=>{const f=ev.target.files[0];if(!f)return;const r=new FileReader();
@@ -612,9 +1003,53 @@ function renderData(){
   $("sList").querySelectorAll(".del").forEach(b=>b.onclick=()=>{state.scans=state.scans.filter(s=>s.date!==b.dataset.s);save();render();});
 }
 
+/* ---------------- CLOUD SYNC ---------------- */
+const SYNC_KEY="maintCoach.sync",SYNC_URL_DEFAULT="";
+let sync=(()=>{try{return JSON.parse(localStorage.getItem(SYNC_KEY))||{};}catch(e){return {};}})(),syncT=null,syncBusy=false;
+function syncSave(){try{localStorage.setItem(SYNC_KEY,JSON.stringify(sync));}catch(e){}}
+function syncOn(){return !!(sync.on&&sync.url&&sync.key);}
+function paintSync(msg,bad){const el=$("syStatus");if(!el)return;
+  el.className="note"+(bad?" warn":"");
+  el.innerHTML=syncOn()?("<b>Sync is on.</b> "+(msg||"")+(sync.last?" Last synced "+new Date(sync.last).toLocaleString(undefined,{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+".":"")):("Sync is off. Your data is only on this device."+(msg?" "+msg:""));
+  $("syToggle").textContent=syncOn()?"Turn sync off":"Turn sync on";$("syNow").style.display=syncOn()?"block":"none";}
+async function syncCall(method,body){
+  const r=await fetch(sync.url,{method,headers:{"Authorization":"Bearer "+sync.key,"Content-Type":"application/json"},body,cache:"no-store",keepalive:method==="PUT"&&body&&body.length<60000});
+  if(!r.ok)throw new Error(r.status===403?"this key does not match the one that owns the cloud copy":"server replied "+r.status);
+  return method==="GET"?r.json():null;}
+async function syncPush(){if(!syncOn())return;clearTimeout(syncT);syncT=null;
+  try{await syncCall("PUT",JSON.stringify(state));sync.last=Date.now();syncSave();paintSync("Saved to the cloud.");}catch(e){paintSync("Could not save to the cloud ("+e.message+"). It will retry on your next change.",true);}}
+function syncQueue(){if(!syncOn())return;clearTimeout(syncT);syncT=setTimeout(syncPush,4000);}
+async function syncPull(){if(!syncOn()||syncBusy||syncT)return;syncBusy=true;
+  try{const remote=await syncCall("GET");
+    if(remote&&Array.isArray(remote.entries)&&(remote.updated||0)>(state.updated||0)){
+      try{localStorage.setItem("maintCoach.prev",JSON.stringify(state));localStorage.setItem(KEY,JSON.stringify(remote));}catch(e){}
+      sync.last=Date.now();syncSave();location.reload();return;}
+    if(!remote||(state.updated||0)>(remote.updated||0))await syncPush();
+    else{sync.last=Date.now();syncSave();paintSync("Everything is up to date.");}
+  }catch(e){paintSync("Could not reach the cloud ("+e.message+").",true);}finally{syncBusy=false;}}
+function newKey(){const a=new Uint8Array(32);crypto.getRandomValues(a);return btoa(String.fromCharCode.apply(null,a)).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");}
+$("syUrl").value=sync.url||SYNC_URL_DEFAULT;$("syKey").value=sync.key||"";
+$("syShow").onclick=()=>{const k=$("syKey");k.type=k.type==="password"?"text":"password";$("syShow").textContent=k.type==="password"?"Show":"Hide";};
+$("syNew").onclick=()=>{if($("syKey").value&&!confirm("Replace the key in the box with a new one?"))return;$("syKey").value=newKey();$("syKey").type="text";$("syShow").textContent="Hide";};
+$("syCopy").onclick=async()=>{try{await navigator.clipboard.writeText($("syKey").value);flash($("syCopy"),"Copied");}catch(e){$("syKey").type="text";$("syKey").select();}};
+$("syNow").onclick=async()=>{paintSync("Syncing...");clearTimeout(syncT);syncT=null;await syncPull();};
+$("syToggle").onclick=async()=>{
+  if(syncOn()){sync.on=false;syncSave();paintSync();return;}
+  const url=$("syUrl").value.trim(),key=$("syKey").value.trim();
+  if(!/^https:\/\/.+/.test(url)){alert("Paste your sync address first. It starts with https://");return;}
+  if(!/^[A-Za-z0-9_-]{32,80}$/.test(key)){alert("Tap 'New key' to create a sync key, or paste the key from your other device.");return;}
+  sync={on:true,url,key,last:null};paintSync("Connecting...");
+  try{const remote=await syncCall("GET");
+    if(remote&&Array.isArray(remote.entries)&&remote.entries.length&&!confirm("The cloud already has data, last changed "+new Date(remote.updated||0).toLocaleString()+".\n\nOK: use the cloud data on this device.\nCancel: replace the cloud data with this device's data.")){state.updated=Date.now();}
+    else if(remote&&Array.isArray(remote.entries)&&remote.entries.length){state.updated=0;}
+    else state.updated=state.updated||Date.now();
+    syncSave();try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}await syncPull();
+  }catch(e){sync.on=false;syncSave();paintSync("Could not connect ("+e.message+"). Check the address and key.",true);}};
+document.addEventListener("visibilitychange",()=>{if(!syncOn())return;if(document.visibilityState==="visible")syncPull();else if(syncT)syncPush();});
+
 /* ---------------- boot ---------------- */
 function render(){renderHome();renderGym();renderMob();renderData();}
-gymLists();prefill();save();render();
+[...new Set(state.lifts.map(l=>l.ex))].forEach(fixSides);save(true);render();paintSync();if(syncOn())syncPull();
 </script>
 </body>
 </html>
