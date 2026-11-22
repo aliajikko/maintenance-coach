@@ -1004,7 +1004,7 @@ function renderData(){
 }
 
 /* ---------------- CLOUD SYNC ---------------- */
-const SYNC_KEY="maintCoach.sync",SYNC_URL_DEFAULT="";
+const SYNC_KEY="maintCoach.sync",SYNC_URL_DEFAULT="https://fitness-hub-sync.ali-ajeel-rasheed.workers.dev/";
 let sync=(()=>{try{return JSON.parse(localStorage.getItem(SYNC_KEY))||{};}catch(e){return {};}})(),syncT=null,syncBusy=false;
 function syncSave(){try{localStorage.setItem(SYNC_KEY,JSON.stringify(sync));}catch(e){}}
 function syncOn(){return !!(sync.on&&sync.url&&sync.key);}
